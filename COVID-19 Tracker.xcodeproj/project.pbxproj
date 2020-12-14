@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		2B4E905C258730B900B6716C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E905B258730B900B6716C /* AppDelegate.swift */; };
 		2B4E905E258730B900B6716C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E905D258730B900B6716C /* SceneDelegate.swift */; };
-		2B4E9060258730B900B6716C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E905F258730B900B6716C /* ViewController.swift */; };
-		2B4E9063258730B900B6716C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E9061258730B900B6716C /* Main.storyboard */; };
+		2B4E9060258730B900B6716C /* TimelineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E905F258730B900B6716C /* TimelineVC.swift */; };
 		2B4E9065258730BB00B6716C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E9064258730BB00B6716C /* Assets.xcassets */; };
 		2B4E9068258730BB00B6716C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E9066258730BB00B6716C /* LaunchScreen.storyboard */; };
+		2B4E90752587326A00B6716C /* MyCountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E90742587326A00B6716C /* MyCountryVC.swift */; };
+		2B4E90782587327A00B6716C /* ChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E90772587327A00B6716C /* ChartVC.swift */; };
+		2B4E90882587A8F500B6716C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E90872587A8F500B6716C /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B4E9058258730B900B6716C /* COVID-19 Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19 Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4E905B258730B900B6716C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B4E905D258730B900B6716C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2B4E905F258730B900B6716C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2B4E9062258730B900B6716C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B4E905F258730B900B6716C /* TimelineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineVC.swift; sourceTree = "<group>"; };
 		2B4E9064258730BB00B6716C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B4E9067258730BB00B6716C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B4E9069258730BB00B6716C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B4E90742587326A00B6716C /* MyCountryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCountryVC.swift; sourceTree = "<group>"; };
+		2B4E90772587327A00B6716C /* ChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartVC.swift; sourceTree = "<group>"; };
+		2B4E90872587A8F500B6716C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +62,23 @@
 			children = (
 				2B4E905B258730B900B6716C /* AppDelegate.swift */,
 				2B4E905D258730B900B6716C /* SceneDelegate.swift */,
-				2B4E905F258730B900B6716C /* ViewController.swift */,
-				2B4E9061258730B900B6716C /* Main.storyboard */,
+				2B4E90722587323D00B6716C /* Controllers */,
 				2B4E9064258730BB00B6716C /* Assets.xcassets */,
 				2B4E9066258730BB00B6716C /* LaunchScreen.storyboard */,
 				2B4E9069258730BB00B6716C /* Info.plist */,
 			);
 			path = "COVID-19 Tracker";
+			sourceTree = "<group>";
+		};
+		2B4E90722587323D00B6716C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2B4E90872587A8F500B6716C /* TabBarController.swift */,
+				2B4E905F258730B900B6716C /* TimelineVC.swift */,
+				2B4E90742587326A00B6716C /* MyCountryVC.swift */,
+				2B4E90772587327A00B6716C /* ChartVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +140,6 @@
 			files = (
 				2B4E9068258730BB00B6716C /* LaunchScreen.storyboard in Resources */,
 				2B4E9065258730BB00B6716C /* Assets.xcassets in Resources */,
-				2B4E9063258730B900B6716C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +150,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B4E9060258730B900B6716C /* ViewController.swift in Sources */,
+				2B4E9060258730B900B6716C /* TimelineVC.swift in Sources */,
 				2B4E905C258730B900B6716C /* AppDelegate.swift in Sources */,
 				2B4E905E258730B900B6716C /* SceneDelegate.swift in Sources */,
+				2B4E90882587A8F500B6716C /* TabBarController.swift in Sources */,
+				2B4E90752587326A00B6716C /* MyCountryVC.swift in Sources */,
+				2B4E90782587327A00B6716C /* ChartVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2B4E9061258730B900B6716C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B4E9062258730B900B6716C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2B4E9066258730BB00B6716C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.mukatayev.COVID-19-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.mukatayev.COVID-19-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

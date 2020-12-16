@@ -15,17 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Eq1-fw-V9R">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coronavirus" translatesAutoresizingMaskIntoConstraints="NO" id="BUP-wr-7h1">
+                                <rect key="frame" x="50" y="94" width="314" height="718"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.13333333333333333" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Eq1-fw-V9R" secondAttribute="trailing" id="LX0-2X-miy"/>
-                            <constraint firstItem="Eq1-fw-V9R" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="i3S-5n-BS6"/>
-                            <constraint firstAttribute="bottom" secondItem="Eq1-fw-V9R" secondAttribute="bottom" id="mBZ-1c-anB"/>
-                            <constraint firstItem="Eq1-fw-V9R" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="yoP-ZU-nQc"/>
+                            <constraint firstItem="BUP-wr-7h1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="EEH-eB-dcT"/>
+                            <constraint firstItem="BUP-wr-7h1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="f51-W1-BYh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BUP-wr-7h1" secondAttribute="bottom" constant="50" id="oLh-GA-JXU"/>
+                            <constraint firstItem="BUP-wr-7h1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rCN-6g-Ant"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -35,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="640" height="1136"/>
+        <image name="coronavirus" width="512" height="512"/>
     </resources>
 </document>

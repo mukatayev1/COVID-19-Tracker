@@ -9,40 +9,44 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
+    //MARK: - Properties
+    
+    
+    
+    // Create Tab one
+    let tabOne = TimelineVC()
+    let tabOneBarItem = UITabBarItem(title: "World", image: UIImage(systemName: "globe", withConfiguration: UIImage.SymbolConfiguration(weight: .light)), selectedImage: UIImage(systemName: "globe", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy)))
+    
+    // Create Tab two
+    let tabTwo = MyCountryVC()
+    let tabTwoBarItem2 = UITabBarItem(title: "My Country", image: UIImage(systemName: "mappin.circle.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .light)), selectedImage: UIImage(systemName: "mappin.circle.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy)))
+    
+    // Create Tab three
+    let tabThree = ChartVC()
+    let tabTwoBarItem3 = UITabBarItem(title: "Chart", image: UIImage(systemName: "chart.bar.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .light)), selectedImage: UIImage(systemName: "chart.bar.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy)))
+    
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Create Tab one
-        let tabOne = TimelineVC()
-        let tabOneBarItem = UITabBarItem(title: "World", image: UIImage(systemName: "globe", withConfiguration: UIImage.SymbolConfiguration(weight: .medium)), selectedImage: nil)
-        
+        setupNavigationBar()
         tabOne.tabBarItem = tabOneBarItem
-        
-        
-        // Create Tab two
-        let tabTwo = MyCountryVC()
-        let tabTwoBarItem2 = UITabBarItem(title: "My Country", image: UIImage(systemName: "mappin.circle.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .medium)), selectedImage: nil)
-        
         tabTwo.tabBarItem = tabTwoBarItem2
-        
-        let tabThree = ChartVC()
-        let tabTwoBarItem3 = UITabBarItem(title: "Chart", image: UIImage(systemName: "chart.bar.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .medium)), selectedImage: nil)
-        
         tabThree.tabBarItem = tabTwoBarItem3
+        setupTabBar()
         
-        
-       setViewControllers([tabOne, tabTwo, tabThree], animated: true)
+        setViewControllers([tabOne, tabTwo, tabThree], animated: true)
     }
     
-    // UITabBarControllerDelegate method
-    func tabBarController(_ tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
-        print("Selected \(viewController.title!)")
-    }
+    //MARK: - Helpers
     
+    func setupTabBar() {
+        tabBar.barTintColor = CustomColors.darkBlue
+        tabBar.tintColor = CustomColors.lightGray
+    }
+
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print("Selected \(item.title!)")
+    }
+
 }

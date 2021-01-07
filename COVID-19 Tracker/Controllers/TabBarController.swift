@@ -7,11 +7,10 @@
 
 import UIKit
 
+
 class TabBarController: UITabBarController {
     
     //MARK: - Properties
-    
-    
     
     // Create Tab one
     let tabOne = TimelineVC()
@@ -45,8 +44,8 @@ class TabBarController: UITabBarController {
         tabBar.tintColor = CustomColors.lightGray
     }
 
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        print("Selected \(item.title!)")
-    }
+//    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+//        print("Selected \(item.title!)")
+//    }
 
 }

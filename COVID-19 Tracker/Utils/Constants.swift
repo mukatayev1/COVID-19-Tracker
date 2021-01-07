@@ -14,7 +14,3 @@ struct CustomColors {
     static let purple = #colorLiteral(red: 0.431372549, green: 0.3215686275, blue: 0.9882352941, alpha: 1)
     static let lightBlue = #colorLiteral(red: 0.3215686275, green: 0.6274509804, blue: 0.9725490196, alpha: 1)
 }
-
-struct K {
-    static let myTitleView = UIImageView(image: #imageLiteral(resourceName: "coronavirus"))
-}

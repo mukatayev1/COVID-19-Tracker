@@ -19,6 +19,8 @@
 		2B4E90882587A8F500B6716C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E90872587A8F500B6716C /* TabBarController.swift */; };
 		2B4E90902587F42400B6716C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E908F2587F42400B6716C /* Extensions.swift */; };
 		2B70AA68258A57870096E042 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B70AA67258A57870096E042 /* Constants.swift */; };
+		2B9ED52F25A6050800678E9E /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9ED52E25A6050800678E9E /* Summary.swift */; };
+		2BB218FE25A772E600DD7815 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB218FD25A772E600DD7815 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		2B4E90872587A8F500B6716C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2B4E908F2587F42400B6716C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2B70AA67258A57870096E042 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2B9ED52E25A6050800678E9E /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		2BB218FD25A772E600DD7815 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		46ADAB27013E5531E85525FE /* Pods-COVID-19 Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID-19 Tracker.debug.xcconfig"; path = "Target Support Files/Pods-COVID-19 Tracker/Pods-COVID-19 Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		61F9F4BA013D6763AD42DEFA /* Pods_COVID_19_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_COVID_19_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F391C0F0F026F517783563 /* Pods-COVID-19 Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID-19 Tracker.release.xcconfig"; path = "Target Support Files/Pods-COVID-19 Tracker/Pods-COVID-19 Tracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 			children = (
 				2B4E905B258730B900B6716C /* AppDelegate.swift */,
 				2B4E905D258730B900B6716C /* SceneDelegate.swift */,
+				2B9AE3C02595D06A00D155DE /* Networking */,
+				2B9AE3BB2595C84300D155DE /* Model */,
 				2B1DE6F9258A640300209708 /* View */,
 				2B4E90722587323D00B6716C /* Controllers */,
 				2B70AA6A258A57B40096E042 /* Utils */,
@@ -111,6 +117,22 @@
 				2B4E908F2587F42400B6716C /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		2B9AE3BB2595C84300D155DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B9ED52E25A6050800678E9E /* Summary.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B9AE3C02595D06A00D155DE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2BB218FD25A772E600DD7815 /* Service.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		406E92C2CD5A13A2355B1958 /* Pods */ = {
@@ -246,10 +268,12 @@
 				2B4E9060258730B900B6716C /* TimelineVC.swift in Sources */,
 				2B4E905C258730B900B6716C /* AppDelegate.swift in Sources */,
 				2B4E905E258730B900B6716C /* SceneDelegate.swift in Sources */,
+				2B9ED52F25A6050800678E9E /* Summary.swift in Sources */,
 				2B09989D258A7FD3005A1C5F /* CustomNavigationController.swift in Sources */,
 				2B4E90882587A8F500B6716C /* TabBarController.swift in Sources */,
 				2B4E90752587326A00B6716C /* MyCountryVC.swift in Sources */,
 				2B4E90782587327A00B6716C /* ChartVC.swift in Sources */,
+				2BB218FE25A772E600DD7815 /* Service.swift in Sources */,
 				2B4E90902587F42400B6716C /* Extensions.swift in Sources */,
 				2B70AA68258A57870096E042 /* Constants.swift in Sources */,
 			);

@@ -85,7 +85,7 @@ extension UIView {
 //MARK: - UIViewController
 extension UIViewController {
     
-    func setupGradientLayer(from topColor: UIColor, to bottomColor: UIColor, locations: [NSNumber]?) {
+    func setupGradientLayer(from topColor: UIColor, to bottomColor: UIColor, locations: [NSNumber]?, in view: UIView) {
         let gradient = CAGradientLayer()
         gradient.colors = [topColor.cgColor, bottomColor.cgColor]
         gradient.locations = locations
@@ -102,6 +102,7 @@ extension UIViewController {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = UIColor.clear
+        appearance.shadowColor = .clear
         navigationItem.standardAppearance = appearance
         navigationItem.scrollEdgeAppearance = appearance
         navigationItem.compactAppearance = appearance

@@ -6,24 +6,30 @@
 //
 
 import UIKit
+import Alamofire
 
 class TimelineVC: UIViewController {
     
     //MARK: - Properties
     
+    let summaryService = Service()
     
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = CustomColors.darkBlue
+        //subviews
+        setupView()
         
     }
     
     //MARK: - Helpers
     
-
+    func setupView() {
+        setupGradientLayer(from: CustomColors.darkBlue, to: CustomColors.ocean, locations: [0,1], in: self.view)
+        
+    }
     
 }
 
+//MARK: - Alamofire

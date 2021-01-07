@@ -11,12 +11,13 @@ class MyCountryVC: UIViewController {
     
     //MARK: - Properties
     
+    
+    
     //MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = CustomColors.darkBlue
-        
+        setupGradientLayer(from: CustomColors.darkBlue, to: CustomColors.ocean, locations: [0,1], in: self.view)
     }
     
     //MARK: - Helpers

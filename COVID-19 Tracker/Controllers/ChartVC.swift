@@ -6,21 +6,25 @@
 //
 
 import UIKit
+import Alamofire
 
 class ChartVC: UIViewController {
     
     //MARK: - Properties
     
-    
-    
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = CustomColors.darkBlue
+        //subviews
+        setupSubviews()
     }
-
+    
     //MARK: - Helpers
     
+    func setupSubviews() {
+    }
+    
+    //MARK: - Subviews
     
 }

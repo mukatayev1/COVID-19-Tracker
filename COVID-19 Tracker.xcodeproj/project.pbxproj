@@ -21,6 +21,7 @@
 		2B70AA68258A57870096E042 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B70AA67258A57870096E042 /* Constants.swift */; };
 		2B9ED52F25A6050800678E9E /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9ED52E25A6050800678E9E /* Summary.swift */; };
 		2BB218FE25A772E600DD7815 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB218FD25A772E600DD7815 /* Service.swift */; };
+		2BB2190525A78C0500DD7815 /* SummaryBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB2190425A78C0500DD7815 /* SummaryBoxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		2B70AA67258A57870096E042 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2B9ED52E25A6050800678E9E /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		2BB218FD25A772E600DD7815 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		2BB2190425A78C0500DD7815 /* SummaryBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryBoxView.swift; sourceTree = "<group>"; };
 		46ADAB27013E5531E85525FE /* Pods-COVID-19 Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID-19 Tracker.debug.xcconfig"; path = "Target Support Files/Pods-COVID-19 Tracker/Pods-COVID-19 Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		61F9F4BA013D6763AD42DEFA /* Pods_COVID_19_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_COVID_19_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F391C0F0F026F517783563 /* Pods-COVID-19 Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID-19 Tracker.release.xcconfig"; path = "Target Support Files/Pods-COVID-19 Tracker/Pods-COVID-19 Tracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				2B09989C258A7FD3005A1C5F /* CustomNavigationController.swift */,
+				2BB2190425A78C0500DD7815 /* SummaryBoxView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				2B4E90752587326A00B6716C /* MyCountryVC.swift in Sources */,
 				2B4E90782587327A00B6716C /* ChartVC.swift in Sources */,
 				2BB218FE25A772E600DD7815 /* Service.swift in Sources */,
+				2BB2190525A78C0500DD7815 /* SummaryBoxView.swift in Sources */,
 				2B4E90902587F42400B6716C /* Extensions.swift in Sources */,
 				2B70AA68258A57870096E042 /* Constants.swift in Sources */,
 			);

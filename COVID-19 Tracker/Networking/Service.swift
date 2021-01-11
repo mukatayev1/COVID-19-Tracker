@@ -21,12 +21,35 @@ class Service {
         self.baseURL = URL(string: "https://covid-19-data.p.rapidapi.com/totals")
     }
     
-    func getSummary() {
-        AF.request(baseURL as! URLConvertible, method: .get, headers: headers)
+    func getSummary(completion: @escaping (Summary?) -> Void) {
+        
+        AF.request(baseURL!, method: .get, headers: headers)
             .validate()
             .responseJSON { (response) in
-                let jsonDictionary = response.value as? [[String: Any]]
                 
+                if let jsonDictionary = response.value as? [[String: Any]] {
+                    
+                    if let summaryDictionary = jsonDictionary[0] as? [String: Any] {
+                        let summary = Summary(summaryDictionary: summaryDictionary)
+                        completion(summary)
+                    } else {
+                        completion(nil)
+                    }
+                }
             }
     }
 }
+
+/*
+ success(<__NSSingleObjectArrayI 0x600002789180>(
+ {
+ confirmed = 93307139;
+ critical = 108595;
+ deaths = 2642052;
+ lastChange = "2021-01-10T23:44:35+01:00";
+ lastUpdate = "2021-01-10T23:45:04+01:00";
+ recovered = 65910267;
+ }
+ )
+ )
+ */

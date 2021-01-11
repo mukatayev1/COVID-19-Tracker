@@ -33,11 +33,3 @@ class Summary {
         recovered = summaryDictionary[SummaryKeys.recovered] as! Int
     }
 }
-/*
- confirmed = 90592719;
- critical = 108058;
- deaths = 2597352;
- lastChange = "2021-01-07T14:07:10+01:00";
- lastUpdate = "2021-01-07T14:15:03+01:00";
- recovered = 64530014;
- */

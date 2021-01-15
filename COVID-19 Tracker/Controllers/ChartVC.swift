@@ -16,6 +16,7 @@ class ChartVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupGradientLayer(from: CustomColors.darkBlue, to: CustomColors.ocean, locations: [0,1], in: self.view)
         //subviews
         setupSubviews()
     }

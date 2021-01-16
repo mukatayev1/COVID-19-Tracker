@@ -13,19 +13,35 @@ class DataTwoCell: UITableViewCell {
     
     let summaryService = Service()
     
-    private let lastUpdateLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = CustomColors.lightGray
-        label.text = "Latest Update: "
-        label.font = UIFont.systemFont(ofSize: 15, weight: .light)
-        return label
+    private let criticalBox: SummaryBoxView = {
+        let v = SummaryBoxView()
+        v.backgroundColor = CustomColors.darkBlue
+        v.nameLabel.text = "Critical"
+        v.numberLabel.textColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        return v
     }()
     
-    private let dateLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = CustomColors.lightGray
-        label.font = UIFont.systemFont(ofSize: 14, weight: .light)
-        return label
+    private let testedBox: SummaryBoxView = {
+        let v = SummaryBoxView()
+        v.backgroundColor = CustomColors.darkBlue
+        v.nameLabel.text = "Tested"
+        return v
+    }()
+    
+    private let deathRatioBox: SummaryBoxView = {
+        let v = SummaryBoxView()
+        v.backgroundColor = CustomColors.darkBlue
+        v.nameLabel.text = "Death Ratio"
+        v.numberLabel.textColor = .systemRed
+        return v
+    }()
+    
+    private let recoveryRatioBox: SummaryBoxView = {
+        let v = SummaryBoxView()
+        v.backgroundColor = CustomColors.darkBlue
+        v.nameLabel.text = "Recovery Ratio"
+        v.numberLabel.textColor = .systemGreen
+        return v
     }()
     
     //MARK: - Lifecycle
@@ -36,11 +52,17 @@ class DataTwoCell: UITableViewCell {
         subviewElements()
         summaryService.getSummary { (result) in
             
-            guard let stringTimestamp = result?.data.lastChecked else { return }
-            let convertedDate = self.dateConverter(from: stringTimestamp)
+            guard let summary = result?.data.summary else { return }
             
-            self.dateLabel.text = convertedDate
-            
+            let criticalText = self.decimate(number: summary.critical)
+            let testedText = self.decimate(number: summary.tested)
+            let deathRatioText = String(format: "%.2f", summary.deathRatio)
+            let recoveryRatioText = String(format: "%.2f", summary.recoveryRatio)
+
+            self.criticalBox.numberLabel.text = criticalText
+            self.testedBox.numberLabel.text = testedText
+            self.deathRatioBox.numberLabel.text = "\(deathRatioText)%"
+            self.recoveryRatioBox.numberLabel.text = "\(recoveryRatioText)%"
         }
     }
     
@@ -50,31 +72,29 @@ class DataTwoCell: UITableViewCell {
     
     //MARK: - Helpers
     
-    func dateConverter(from string: String) -> String {
-        let date = Date()
-
-        let formatter = DateFormatter()
-        formatter.timeZone = .current
-        formatter.locale = .current
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
-        formatter.dateStyle = .short
-        formatter.timeStyle = .short
-
-        let dateFromString = formatter.date(from: string) ?? date
-        let stringFromDate = formatter.string(from: dateFromString)
+    func decimate(number: Int) -> String? {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        let formattedNumber = numberFormatter.string(from: NSNumber(value: number))
         
-        return stringFromDate
+        return formattedNumber
     }
     
     //MARK: - Subviews
     
     func subviewElements() {
         
-        addSubview(lastUpdateLabel)
-        lastUpdateLabel.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, paddingLeft: 15, width: 100)
+        addSubview(criticalBox)
+        criticalBox.anchor(top: topAnchor, left: leftAnchor, bottom: centerYAnchor, right: centerXAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 5, paddingRight: 5)
         
-        addSubview(dateLabel)
-        dateLabel.anchor(top: topAnchor, left: lastUpdateLabel.rightAnchor, bottom: bottomAnchor, paddingLeft: 10)
+        addSubview(testedBox)
+        testedBox.anchor(top: topAnchor, left: centerXAnchor, bottom: centerYAnchor, right: rightAnchor, paddingTop: 10, paddingLeft: 5, paddingBottom: 5, paddingRight: 10)
+        
+        addSubview(deathRatioBox)
+        deathRatioBox.anchor(top: centerYAnchor, left: leftAnchor, bottom: bottomAnchor, right: centerXAnchor, paddingTop: 5, paddingLeft: 10, paddingBottom: 5, paddingRight: 5)
+        
+        addSubview(recoveryRatioBox)
+        recoveryRatioBox.anchor(top: centerYAnchor, left: centerXAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 10)
     }
     
 }

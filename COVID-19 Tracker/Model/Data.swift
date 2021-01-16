@@ -8,47 +8,42 @@
 import Foundation
 
 struct Data: Codable {
-    let confirmed: Int
-    let deaths: Int
-    let lastChecked: String
-    let lastReported: String
-    let location: String
-    let recovered: Int
+    let summary: Summary
+    let change: Change
+    let generatedOn: Int
     
     enum CodingKeys: String, CodingKey {
-        case confirmed
-        case deaths
-        case lastChecked
-        case lastReported
-        case location
-        case recovered
+        case summary
+        case change
+        case generatedOn = "generated_on"
     }
 }
 
-extension Data: Displayable {
-    var confirmedLabelText: String {
-        String(confirmed)
-    }
-    
-    var deathsLabelText: String {
-        String(deaths)
-    }
-    
-    var lastCheckedLabelText: String {
-        lastChecked
-    }
-    
-    var lastReportedLabelText: String {
-        lastReported
-    }
-    
-    var locationLabelText: String {
-        location
-    }
-    
-    var recoveredLabelText: String {
-        String(recovered)
-    }
-    
-    
-}
+//extension Data: Displayable {
+//
+//    var confirmedLabelText: String {
+//        String(confirmed)
+//    }
+//    
+//    var deathsLabelText: String {
+//        String(deaths)
+//    }
+//    
+//    var lastCheckedLabelText: String {
+//        lastChecked
+//    }
+//    
+//    var lastReportedLabelText: String {
+//        lastReported
+//    }
+//    
+//    var locationLabelText: String {
+//        location
+//    }
+//    
+//    var recoveredLabelText: String {
+//        String(recovered)
+//    }
+//    
+//    
+//}

@@ -12,8 +12,7 @@ class SummaryBoxView: UIView {
     let numberLabel: UILabel = {
         let tv = UILabel()
         tv.textColor = .white
-        tv.font = UIFont.systemFont(ofSize: 32)
-        tv.text = "######"
+        tv.font = UIFont.systemFont(ofSize: 28)
         return tv
     }()
     

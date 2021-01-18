@@ -12,7 +12,7 @@ class TimelineVC: UIViewController {
     
     //MARK: - Properties
     
-    let summaryService = Service()
+    let summaryService = SummaryService()
     
     private let tableView: UITableView = {
         let tv = UITableView()

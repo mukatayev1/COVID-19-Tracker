@@ -12,7 +12,7 @@ class DataFourCell: UITableViewCell {
 
     //MARK: - Properties
     
-    let summaryService = Service()
+    let summaryService = SummaryService()
     let pieChart = PieChartView()
     
     let activeCasesDataEntry = PieChartDataEntry()
@@ -30,16 +30,16 @@ class DataFourCell: UITableViewCell {
         subviewElements()
         let chartData = PieChartData(dataSet: setupPieChart())
         
-        summaryService.getSummary { (result) in
-
-            guard let summary = result?.data.summary else { return }
-
-            self.activeCasesDataEntry.value = Double(summary.activeCases)
-            self.deathsDataEntry.value = Double(summary.deaths)
-            self.recoveredDataEntry.value = Double(summary.recovered)
-            self.criticalDataEntry.value = Double(summary.critical)
+        summaryService.getSummary { (summary) in
             
-            self.pieChart.data = chartData
+            if let summary = summary {
+                self.activeCasesDataEntry.value = Double(summary.activeCases)
+                self.deathsDataEntry.value = Double(summary.deaths)
+                self.recoveredDataEntry.value = Double(summary.recovered)
+                self.criticalDataEntry.value = Double(summary.critical)
+                
+                self.pieChart.data = chartData
+            }
         }
     }
     

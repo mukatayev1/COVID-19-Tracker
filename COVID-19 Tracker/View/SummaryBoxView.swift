@@ -10,18 +10,28 @@ import UIKit
 class SummaryBoxView: UIView {
     
     let numberLabel: UILabel = {
-        let tv = UILabel()
-        tv.textColor = .white
-        tv.font = UIFont.systemFont(ofSize: 28)
-        return tv
+        let label = UILabel()
+        label.textColor = .white
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 28)
+        return label
     }()
     
     let nameLabel: UILabel = {
-       let tv = UILabel()
-        tv.text = "TextLabel"
-        tv.textColor = UIColor.white
-        tv.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
-        return tv
+       let label = UILabel()
+        label.text = "TextLabel"
+        label.textColor = UIColor.white
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        return label
+    }()
+    
+    let changesLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = UIColor.clear
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        return label
     }()
     
     
@@ -44,6 +54,9 @@ class SummaryBoxView: UIView {
         addSubview(numberLabel)
         numberLabel.centerX(inView: self)
         numberLabel.centerY(inView: self)
+        
+        addSubview(changesLabel)
+        changesLabel.anchor(top: numberLabel.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 5, paddingLeft: 10, paddingRight: 10)
         
     }
 }

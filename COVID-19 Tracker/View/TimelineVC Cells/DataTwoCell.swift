@@ -11,13 +11,14 @@ class DataTwoCell: UITableViewCell {
     
     //MARK: - Properties
     
-    let summaryService = Service()
+    let summaryService = SummaryService()
     
     private let criticalBox: SummaryBoxView = {
         let v = SummaryBoxView()
         v.backgroundColor = CustomColors.darkBlue
         v.nameLabel.text = "Critical"
         v.numberLabel.textColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        v.changesLabel.textColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         return v
     }()
     
@@ -25,6 +26,7 @@ class DataTwoCell: UITableViewCell {
         let v = SummaryBoxView()
         v.backgroundColor = CustomColors.darkBlue
         v.nameLabel.text = "Tested"
+        v.changesLabel.textColor = .white
         return v
     }()
     
@@ -50,20 +52,8 @@ class DataTwoCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
         subviewElements()
-        summaryService.getSummary { (result) in
-            
-            guard let summary = result?.data.summary else { return }
-            
-            let criticalText = self.decimate(number: summary.critical)
-            let testedText = self.decimate(number: summary.tested)
-            let deathRatioText = String(format: "%.2f", summary.deathRatio)
-            let recoveryRatioText = String(format: "%.2f", summary.recoveryRatio)
-
-            self.criticalBox.numberLabel.text = criticalText
-            self.testedBox.numberLabel.text = testedText
-            self.deathRatioBox.numberLabel.text = "\(deathRatioText)%"
-            self.recoveryRatioBox.numberLabel.text = "\(recoveryRatioText)%"
-        }
+        fetchSummary()
+        fetchChanges()
     }
     
     required init?(coder: NSCoder) {
@@ -71,6 +61,36 @@ class DataTwoCell: UITableViewCell {
     }
     
     //MARK: - Helpers
+    
+    func fetchSummary() {
+        summaryService.getSummary { (summary) in
+            
+            if let summary = summary {
+                let criticalText = self.decimate(number: summary.critical)
+                let testedText = self.decimate(number: summary.tested)
+                let deathRatioText = String(format: "%.2f", summary.deathRatio)
+                let recoveryRatioText = String(format: "%.2f", summary.recoveryRatio)
+
+                self.criticalBox.numberLabel.text = criticalText
+                self.testedBox.numberLabel.text = testedText
+                self.deathRatioBox.numberLabel.text = "\(deathRatioText)%"
+                self.recoveryRatioBox.numberLabel.text = "\(recoveryRatioText)%"
+            }
+        }
+    }
+    
+    func fetchChanges() {
+        summaryService.getChanges { (changes) in
+            
+            if let changes = changes {
+                let criticalChangesText = self.decimate(number: changes.critical)
+                let testedChangesText = self.decimate(number: changes.tested)
+                
+                self.criticalBox.changesLabel.text = "\(criticalChangesText!)"
+                self.testedBox.changesLabel.text = "+\(testedChangesText!)"
+            }
+        }
+    }
     
     func decimate(number: Int) -> String? {
         let numberFormatter = NumberFormatter()

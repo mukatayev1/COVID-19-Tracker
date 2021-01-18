@@ -11,7 +11,7 @@ class DataZeroCell: UITableViewCell {
     
     //MARK: - Properties
     
-    let summaryService = Service()
+    let summaryService = SummaryService()
     
     private let titleLabel: UILabel = {
         let label = UILabel()

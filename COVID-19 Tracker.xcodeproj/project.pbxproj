@@ -21,15 +21,18 @@
 		2B4E90882587A8F500B6716C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E90872587A8F500B6716C /* TabBarController.swift */; };
 		2B4E90902587F42400B6716C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E908F2587F42400B6716C /* Extensions.swift */; };
 		2B70AA68258A57870096E042 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B70AA67258A57870096E042 /* Constants.swift */; };
-		2BB218FE25A772E600DD7815 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB218FD25A772E600DD7815 /* Service.swift */; };
+		2B87E95D25B4ABBD0053F4BB /* CountriesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87E95C25B4ABBD0053F4BB /* CountriesResult.swift */; };
+		2B87E96025B4AC630053F4BB /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87E95F25B4AC630053F4BB /* Country.swift */; };
+		2BB218FE25A772E600DD7815 /* SummaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB218FD25A772E600DD7815 /* SummaryService.swift */; };
 		2BB2190525A78C0500DD7815 /* SummaryBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB2190425A78C0500DD7815 /* SummaryBoxView.swift */; };
 		2BD34AB325B2ED34002FB2AE /* DataThreeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD34AB225B2ED34002FB2AE /* DataThreeCell.swift */; };
 		2BD34AB925B34613002FB2AE /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD34AB825B34613002FB2AE /* Change.swift */; };
 		2BD34AC025B34AAF002FB2AE /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD34ABF25B34AAF002FB2AE /* Summary.swift */; };
 		2BD34AC525B357AB002FB2AE /* DataFourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD34AC425B357AB002FB2AE /* DataFourCell.swift */; };
+		2BD34ACB25B42F79002FB2AE /* CountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD34ACA25B42F79002FB2AE /* CountriesService.swift */; };
 		2BF15F5F25AC849800338714 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF15F5E25AC849800338714 /* Data.swift */; };
 		2BF15F6B25AD9F5800338714 /* DataOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF15F6A25AD9F5800338714 /* DataOneCell.swift */; };
-		2BF15F6F25AEE73400338714 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF15F6E25AEE73400338714 /* Result.swift */; };
+		2BF15F6F25AEE73400338714 /* SummaryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF15F6E25AEE73400338714 /* SummaryResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,15 +51,18 @@
 		2B4E90872587A8F500B6716C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2B4E908F2587F42400B6716C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2B70AA67258A57870096E042 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		2BB218FD25A772E600DD7815 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		2B87E95C25B4ABBD0053F4BB /* CountriesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesResult.swift; sourceTree = "<group>"; };
+		2B87E95F25B4AC630053F4BB /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		2BB218FD25A772E600DD7815 /* SummaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryService.swift; sourceTree = "<group>"; };
 		2BB2190425A78C0500DD7815 /* SummaryBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryBoxView.swift; sourceTree = "<group>"; };
 		2BD34AB225B2ED34002FB2AE /* DataThreeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataThreeCell.swift; sourceTree = "<group>"; };
 		2BD34AB825B34613002FB2AE /* Change.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
 		2BD34ABF25B34AAF002FB2AE /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		2BD34AC425B357AB002FB2AE /* DataFourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFourCell.swift; sourceTree = "<group>"; };
+		2BD34ACA25B42F79002FB2AE /* CountriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesService.swift; sourceTree = "<group>"; };
 		2BF15F5E25AC849800338714 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2BF15F6A25AD9F5800338714 /* DataOneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOneCell.swift; sourceTree = "<group>"; };
-		2BF15F6E25AEE73400338714 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		2BF15F6E25AEE73400338714 /* SummaryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryResult.swift; sourceTree = "<group>"; };
 		46ADAB27013E5531E85525FE /* Pods-COVID-19 Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID-19 Tracker.debug.xcconfig"; path = "Target Support Files/Pods-COVID-19 Tracker/Pods-COVID-19 Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		61F9F4BA013D6763AD42DEFA /* Pods_COVID_19_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_COVID_19_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F391C0F0F026F517783563 /* Pods-COVID-19 Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID-19 Tracker.release.xcconfig"; path = "Target Support Files/Pods-COVID-19 Tracker/Pods-COVID-19 Tracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,11 +85,8 @@
 			children = (
 				2B09989C258A7FD3005A1C5F /* CustomNavigationController.swift */,
 				2BB2190425A78C0500DD7815 /* SummaryBoxView.swift */,
-				2B1FB9CB25B1D15D00610757 /* DataZeroCell.swift */,
-				2BF15F6A25AD9F5800338714 /* DataOneCell.swift */,
-				2B1FB9C825B0EB1800610757 /* DataTwoCell.swift */,
-				2BD34AB225B2ED34002FB2AE /* DataThreeCell.swift */,
-				2BD34AC425B357AB002FB2AE /* DataFourCell.swift */,
+				2B87E96325B4AE200053F4BB /* ChartVC Cells */,
+				2B87E96225B4AE050053F4BB /* TimelineVC Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,13 +154,30 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		2B87E96225B4AE050053F4BB /* TimelineVC Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2B1FB9CB25B1D15D00610757 /* DataZeroCell.swift */,
+				2BF15F6A25AD9F5800338714 /* DataOneCell.swift */,
+				2B1FB9C825B0EB1800610757 /* DataTwoCell.swift */,
+				2BD34AB225B2ED34002FB2AE /* DataThreeCell.swift */,
+				2BD34AC425B357AB002FB2AE /* DataFourCell.swift */,
+			);
+			path = "TimelineVC Cells";
+			sourceTree = "<group>";
+		};
+		2B87E96325B4AE200053F4BB /* ChartVC Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "ChartVC Cells";
+			sourceTree = "<group>";
+		};
 		2B9AE3BB2595C84300D155DE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2BF15F6E25AEE73400338714 /* Result.swift */,
-				2BF15F5E25AC849800338714 /* Data.swift */,
-				2BD34ABF25B34AAF002FB2AE /* Summary.swift */,
-				2BD34AB825B34613002FB2AE /* Change.swift */,
+				2BD34ACE25B46995002FB2AE /* Summary Models */,
+				2BD34ACF25B469A6002FB2AE /* Countries Models */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,9 +185,30 @@
 		2B9AE3C02595D06A00D155DE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				2BB218FD25A772E600DD7815 /* Service.swift */,
+				2BB218FD25A772E600DD7815 /* SummaryService.swift */,
+				2BD34ACA25B42F79002FB2AE /* CountriesService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		2BD34ACE25B46995002FB2AE /* Summary Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BF15F6E25AEE73400338714 /* SummaryResult.swift */,
+				2BF15F5E25AC849800338714 /* Data.swift */,
+				2BD34ABF25B34AAF002FB2AE /* Summary.swift */,
+				2BD34AB825B34613002FB2AE /* Change.swift */,
+			);
+			path = "Summary Models";
+			sourceTree = "<group>";
+		};
+		2BD34ACF25B469A6002FB2AE /* Countries Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B87E95C25B4ABBD0053F4BB /* CountriesResult.swift */,
+				2B87E95F25B4AC630053F4BB /* Country.swift */,
+			);
+			path = "Countries Models";
 			sourceTree = "<group>";
 		};
 		406E92C2CD5A13A2355B1958 /* Pods */ = {
@@ -301,13 +342,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B4E9060258730B900B6716C /* TimelineVC.swift in Sources */,
-				2BF15F6F25AEE73400338714 /* Result.swift in Sources */,
+				2BF15F6F25AEE73400338714 /* SummaryResult.swift in Sources */,
 				2B1FB9C625B08C4900610757 /* Displayable.swift in Sources */,
 				2BD34AC525B357AB002FB2AE /* DataFourCell.swift in Sources */,
+				2BD34ACB25B42F79002FB2AE /* CountriesService.swift in Sources */,
 				2B4E905C258730B900B6716C /* AppDelegate.swift in Sources */,
 				2B4E905E258730B900B6716C /* SceneDelegate.swift in Sources */,
 				2BD34AC025B34AAF002FB2AE /* Summary.swift in Sources */,
 				2BD34AB925B34613002FB2AE /* Change.swift in Sources */,
+				2B87E96025B4AC630053F4BB /* Country.swift in Sources */,
 				2B09989D258A7FD3005A1C5F /* CustomNavigationController.swift in Sources */,
 				2B4E90882587A8F500B6716C /* TabBarController.swift in Sources */,
 				2B1FB9CC25B1D15D00610757 /* DataZeroCell.swift in Sources */,
@@ -315,7 +358,8 @@
 				2BD34AB325B2ED34002FB2AE /* DataThreeCell.swift in Sources */,
 				2B4E90782587327A00B6716C /* ChartVC.swift in Sources */,
 				2B1FB9C925B0EB1800610757 /* DataTwoCell.swift in Sources */,
-				2BB218FE25A772E600DD7815 /* Service.swift in Sources */,
+				2BB218FE25A772E600DD7815 /* SummaryService.swift in Sources */,
+				2B87E95D25B4ABBD0053F4BB /* CountriesResult.swift in Sources */,
 				2BF15F6B25AD9F5800338714 /* DataOneCell.swift in Sources */,
 				2BB2190525A78C0500DD7815 /* SummaryBoxView.swift in Sources */,
 				2B4E90902587F42400B6716C /* Extensions.swift in Sources */,

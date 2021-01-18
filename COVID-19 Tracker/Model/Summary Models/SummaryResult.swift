@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Result: Codable {
+struct SummaryResult: Codable {
     let data: Data
     
     enum CodingKeys: String, CodingKey {

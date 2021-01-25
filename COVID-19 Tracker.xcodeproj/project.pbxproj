@@ -11,7 +11,7 @@
 		2B09989D258A7FD3005A1C5F /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B09989C258A7FD3005A1C5F /* CustomNavigationController.swift */; };
 		2B177B1A25B5657A002FD055 /* ColumnNamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B177B1925B5657A002FD055 /* ColumnNamesView.swift */; };
 		2B177B3725B6184A002FD055 /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B177B3625B6184A002FD055 /* ChartCell.swift */; };
-		2B177B3A25B62055002FD055 /* ChartCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B177B3925B62055002FD055 /* ChartCVC.swift */; };
+		2B177B3A25B62055002FD055 /* ChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B177B3925B62055002FD055 /* ChartVC.swift */; };
 		2B1FB9C925B0EB1800610757 /* DataTwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FB9C825B0EB1800610757 /* DataTwoCell.swift */; };
 		2B1FB9CC25B1D15D00610757 /* DataZeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FB9CB25B1D15D00610757 /* DataZeroCell.swift */; };
 		2B4E905C258730B900B6716C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E905B258730B900B6716C /* AppDelegate.swift */; };
@@ -37,7 +37,7 @@
 		2B09989C258A7FD3005A1C5F /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		2B177B1925B5657A002FD055 /* ColumnNamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnNamesView.swift; sourceTree = "<group>"; };
 		2B177B3625B6184A002FD055 /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
-		2B177B3925B62055002FD055 /* ChartCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCVC.swift; sourceTree = "<group>"; };
+		2B177B3925B62055002FD055 /* ChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartVC.swift; sourceTree = "<group>"; };
 		2B1FB9C825B0EB1800610757 /* DataTwoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTwoCell.swift; sourceTree = "<group>"; };
 		2B1FB9CB25B1D15D00610757 /* DataZeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataZeroCell.swift; sourceTree = "<group>"; };
 		2B4E9058258730B900B6716C /* COVID-19 Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19 Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +128,7 @@
 			children = (
 				2B4E90872587A8F500B6716C /* TabBarController.swift */,
 				2B4E905F258730B900B6716C /* TimelineVC.swift */,
-				2B177B3925B62055002FD055 /* ChartCVC.swift */,
+				2B177B3925B62055002FD055 /* ChartVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -334,7 +334,7 @@
 				2BD34AB325B2ED34002FB2AE /* DataThreeCell.swift in Sources */,
 				2B177B3725B6184A002FD055 /* ChartCell.swift in Sources */,
 				2B1FB9C925B0EB1800610757 /* DataTwoCell.swift in Sources */,
-				2B177B3A25B62055002FD055 /* ChartCVC.swift in Sources */,
+				2B177B3A25B62055002FD055 /* ChartVC.swift in Sources */,
 				2BB218FE25A772E600DD7815 /* SummaryService.swift in Sources */,
 				2BF15F6B25AD9F5800338714 /* DataOneCell.swift in Sources */,
 				2BB2190525A78C0500DD7815 /* SummaryBoxView.swift in Sources */,

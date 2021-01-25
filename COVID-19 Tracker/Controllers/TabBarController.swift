@@ -17,7 +17,7 @@ class TabBarController: UITabBarController {
     let tabOneBarItem = UITabBarItem(title: "World", image: UIImage(systemName: "globe", withConfiguration: UIImage.SymbolConfiguration(weight: .light)), selectedImage: UIImage(systemName: "globe", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy)))
     
     // Create Tab two
-    let tabTwo = ChartVC()
+    let tabTwo = ChartCVC()
     let tabTwoBarItem = UITabBarItem(title: "Chart", image: UIImage(systemName: "chart.bar.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .light)), selectedImage: UIImage(systemName: "chart.bar.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy)))
     
     //MARK: - Lifecycle

@@ -16,12 +16,6 @@ class TimelineVC: UIViewController {
     
     private let tableView: UITableView = {
         let tv = UITableView()
-        tv.register(DataZeroCell.self, forCellReuseIdentifier: CellIdentifiers.dataZeroIdentifier)
-        tv.register(DataOneCell.self, forCellReuseIdentifier: CellIdentifiers.dataOneIdentifier)
-        tv.register(DataTwoCell.self, forCellReuseIdentifier: CellIdentifiers.dataTwoIdentifier)
-        tv.register(DataThreeCell.self, forCellReuseIdentifier: CellIdentifiers.dataThreeIdentifier)
-        tv.register(DataFourCell.self, forCellReuseIdentifier: CellIdentifiers.dataFourIdentifier)
-        tv.register(UITableViewCell.self, forCellReuseIdentifier: CellIdentifiers.defaultIdentifier)
         tv.backgroundColor = .clear
         tv.separatorStyle = .none
         return tv
@@ -36,8 +30,9 @@ class TimelineVC: UIViewController {
         setupGradientLayer(from: CustomColors.darkBlue, to: CustomColors.ocean, locations: [0,1], in: self.view)
         setupTableView()
         setupIndicatorView()
-        
         activityIndicator.startAnimating()
+        subviewElements()
+        
         summaryService.checkServiceResult { (response) in
             self.activityIndicator.stopAnimating()
         }
@@ -49,18 +44,30 @@ class TimelineVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        view.addSubview(tableView)
-        tableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor)
+        tableView.register(DataZeroCell.self, forCellReuseIdentifier: CellIdentifiers.dataZeroIdentifier)
+        tableView.register(DataOneCell.self, forCellReuseIdentifier: CellIdentifiers.dataOneIdentifier)
+        tableView.register(DataTwoCell.self, forCellReuseIdentifier: CellIdentifiers.dataTwoIdentifier)
+        tableView.register(DataThreeCell.self, forCellReuseIdentifier: CellIdentifiers.dataThreeIdentifier)
+        tableView.register(DataFourCell.self, forCellReuseIdentifier: CellIdentifiers.dataFourIdentifier)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellIdentifiers.defaultIdentifier)
     }
     
     func setupIndicatorView() {
-        activityIndicator.style = .large
+        activityIndicator.style = .medium
         activityIndicator.color = .white
+    }
+    
+    func subviewElements() {
+        view.addSubview(tableView)
+        tableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor)
+        
         view.addSubview(activityIndicator)
         activityIndicator.centerX(inView: view)
         activityIndicator.centerY(inView: view)
     }
 }
+
+//MARK: - Extensions
 
 extension TimelineVC: UITableViewDelegate, UITableViewDataSource {
     

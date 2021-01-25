@@ -75,7 +75,6 @@ class DataThreeCell: UITableViewCell {
     //MARK: - Subviews
     
     func subviewElements() {
-        
         addSubview(lastUpdateLabel)
         lastUpdateLabel.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, paddingLeft: 15, width: 100)
         

@@ -22,4 +22,6 @@ struct CellIdentifiers {
     static let dataThreeIdentifier = "Data Three Cell"
     static let dataFourIdentifier = "Data Four Cell"
     static let defaultIdentifier = "Default Cell"
+    
+    static let chartCellIdentifier = "Chart Cell"
 }

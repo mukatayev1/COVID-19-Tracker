@@ -18,32 +18,3 @@ struct Data: Codable {
         case generatedOn = "generated_on"
     }
 }
-
-//extension Data: Displayable {
-//
-//    var confirmedLabelText: String {
-//        String(confirmed)
-//    }
-//    
-//    var deathsLabelText: String {
-//        String(deaths)
-//    }
-//    
-//    var lastCheckedLabelText: String {
-//        lastChecked
-//    }
-//    
-//    var lastReportedLabelText: String {
-//        lastReported
-//    }
-//    
-//    var locationLabelText: String {
-//        location
-//    }
-//    
-//    var recoveredLabelText: String {
-//        String(recovered)
-//    }
-//    
-//    
-//}

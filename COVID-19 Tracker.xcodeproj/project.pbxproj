@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		1434B8FDF767F398AEC18658 /* Pods_COVID_19_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F9F4BA013D6763AD42DEFA /* Pods_COVID_19_Tracker.framework */; };
 		2B09989D258A7FD3005A1C5F /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B09989C258A7FD3005A1C5F /* CustomNavigationController.swift */; };
-		2B1FB9C625B08C4900610757 /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FB9C525B08C4900610757 /* Displayable.swift */; };
+		2B177B1A25B5657A002FD055 /* ColumnNamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B177B1925B5657A002FD055 /* ColumnNamesView.swift */; };
+		2B177B3725B6184A002FD055 /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B177B3625B6184A002FD055 /* ChartCell.swift */; };
+		2B177B3A25B62055002FD055 /* ChartCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B177B3925B62055002FD055 /* ChartCVC.swift */; };
 		2B1FB9C925B0EB1800610757 /* DataTwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FB9C825B0EB1800610757 /* DataTwoCell.swift */; };
 		2B1FB9CC25B1D15D00610757 /* DataZeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FB9CB25B1D15D00610757 /* DataZeroCell.swift */; };
 		2B4E905C258730B900B6716C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E905B258730B900B6716C /* AppDelegate.swift */; };
@@ -17,19 +19,15 @@
 		2B4E9060258730B900B6716C /* TimelineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E905F258730B900B6716C /* TimelineVC.swift */; };
 		2B4E9065258730BB00B6716C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E9064258730BB00B6716C /* Assets.xcassets */; };
 		2B4E9068258730BB00B6716C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E9066258730BB00B6716C /* LaunchScreen.storyboard */; };
-		2B4E90782587327A00B6716C /* ChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E90772587327A00B6716C /* ChartVC.swift */; };
 		2B4E90882587A8F500B6716C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E90872587A8F500B6716C /* TabBarController.swift */; };
 		2B4E90902587F42400B6716C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E908F2587F42400B6716C /* Extensions.swift */; };
 		2B70AA68258A57870096E042 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B70AA67258A57870096E042 /* Constants.swift */; };
-		2B87E95D25B4ABBD0053F4BB /* CountriesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87E95C25B4ABBD0053F4BB /* CountriesResult.swift */; };
-		2B87E96025B4AC630053F4BB /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87E95F25B4AC630053F4BB /* Country.swift */; };
 		2BB218FE25A772E600DD7815 /* SummaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB218FD25A772E600DD7815 /* SummaryService.swift */; };
 		2BB2190525A78C0500DD7815 /* SummaryBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB2190425A78C0500DD7815 /* SummaryBoxView.swift */; };
 		2BD34AB325B2ED34002FB2AE /* DataThreeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD34AB225B2ED34002FB2AE /* DataThreeCell.swift */; };
 		2BD34AB925B34613002FB2AE /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD34AB825B34613002FB2AE /* Change.swift */; };
 		2BD34AC025B34AAF002FB2AE /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD34ABF25B34AAF002FB2AE /* Summary.swift */; };
 		2BD34AC525B357AB002FB2AE /* DataFourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD34AC425B357AB002FB2AE /* DataFourCell.swift */; };
-		2BD34ACB25B42F79002FB2AE /* CountriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD34ACA25B42F79002FB2AE /* CountriesService.swift */; };
 		2BF15F5F25AC849800338714 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF15F5E25AC849800338714 /* Data.swift */; };
 		2BF15F6B25AD9F5800338714 /* DataOneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF15F6A25AD9F5800338714 /* DataOneCell.swift */; };
 		2BF15F6F25AEE73400338714 /* SummaryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF15F6E25AEE73400338714 /* SummaryResult.swift */; };
@@ -37,7 +35,9 @@
 
 /* Begin PBXFileReference section */
 		2B09989C258A7FD3005A1C5F /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
-		2B1FB9C525B08C4900610757 /* Displayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
+		2B177B1925B5657A002FD055 /* ColumnNamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnNamesView.swift; sourceTree = "<group>"; };
+		2B177B3625B6184A002FD055 /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
+		2B177B3925B62055002FD055 /* ChartCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCVC.swift; sourceTree = "<group>"; };
 		2B1FB9C825B0EB1800610757 /* DataTwoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTwoCell.swift; sourceTree = "<group>"; };
 		2B1FB9CB25B1D15D00610757 /* DataZeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataZeroCell.swift; sourceTree = "<group>"; };
 		2B4E9058258730B900B6716C /* COVID-19 Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19 Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,19 +47,15 @@
 		2B4E9064258730BB00B6716C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B4E9067258730BB00B6716C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B4E9069258730BB00B6716C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B4E90772587327A00B6716C /* ChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartVC.swift; sourceTree = "<group>"; };
 		2B4E90872587A8F500B6716C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2B4E908F2587F42400B6716C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2B70AA67258A57870096E042 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		2B87E95C25B4ABBD0053F4BB /* CountriesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesResult.swift; sourceTree = "<group>"; };
-		2B87E95F25B4AC630053F4BB /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		2BB218FD25A772E600DD7815 /* SummaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryService.swift; sourceTree = "<group>"; };
 		2BB2190425A78C0500DD7815 /* SummaryBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryBoxView.swift; sourceTree = "<group>"; };
 		2BD34AB225B2ED34002FB2AE /* DataThreeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataThreeCell.swift; sourceTree = "<group>"; };
 		2BD34AB825B34613002FB2AE /* Change.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Change.swift; sourceTree = "<group>"; };
 		2BD34ABF25B34AAF002FB2AE /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		2BD34AC425B357AB002FB2AE /* DataFourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFourCell.swift; sourceTree = "<group>"; };
-		2BD34ACA25B42F79002FB2AE /* CountriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesService.swift; sourceTree = "<group>"; };
 		2BF15F5E25AC849800338714 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2BF15F6A25AD9F5800338714 /* DataOneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOneCell.swift; sourceTree = "<group>"; };
 		2BF15F6E25AEE73400338714 /* SummaryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryResult.swift; sourceTree = "<group>"; };
@@ -85,19 +81,11 @@
 			children = (
 				2B09989C258A7FD3005A1C5F /* CustomNavigationController.swift */,
 				2BB2190425A78C0500DD7815 /* SummaryBoxView.swift */,
-				2B87E96325B4AE200053F4BB /* ChartVC Cells */,
+				2B177B1925B5657A002FD055 /* ColumnNamesView.swift */,
 				2B87E96225B4AE050053F4BB /* TimelineVC Cells */,
+				2B87E96325B4AE200053F4BB /* ChartVC Cells */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		2B1FB9CE25B2025C00610757 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				2B4E905F258730B900B6716C /* TimelineVC.swift */,
-				2B4E90772587327A00B6716C /* ChartVC.swift */,
-			);
-			path = Screens;
 			sourceTree = "<group>";
 		};
 		2B4E904F258730B900B6716C = {
@@ -139,7 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				2B4E90872587A8F500B6716C /* TabBarController.swift */,
-				2B1FB9CE25B2025C00610757 /* Screens */,
+				2B4E905F258730B900B6716C /* TimelineVC.swift */,
+				2B177B3925B62055002FD055 /* ChartCVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,7 +138,6 @@
 			children = (
 				2B70AA67258A57870096E042 /* Constants.swift */,
 				2B4E908F2587F42400B6716C /* Extensions.swift */,
-				2B1FB9C525B08C4900610757 /* Displayable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -169,6 +157,7 @@
 		2B87E96325B4AE200053F4BB /* ChartVC Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2B177B3625B6184A002FD055 /* ChartCell.swift */,
 			);
 			path = "ChartVC Cells";
 			sourceTree = "<group>";
@@ -177,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				2BD34ACE25B46995002FB2AE /* Summary Models */,
-				2BD34ACF25B469A6002FB2AE /* Countries Models */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				2BB218FD25A772E600DD7815 /* SummaryService.swift */,
-				2BD34ACA25B42F79002FB2AE /* CountriesService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -200,15 +187,6 @@
 				2BD34AB825B34613002FB2AE /* Change.swift */,
 			);
 			path = "Summary Models";
-			sourceTree = "<group>";
-		};
-		2BD34ACF25B469A6002FB2AE /* Countries Models */ = {
-			isa = PBXGroup;
-			children = (
-				2B87E95C25B4ABBD0053F4BB /* CountriesResult.swift */,
-				2B87E95F25B4AC630053F4BB /* Country.swift */,
-			);
-			path = "Countries Models";
 			sourceTree = "<group>";
 		};
 		406E92C2CD5A13A2355B1958 /* Pods */ = {
@@ -343,23 +321,21 @@
 			files = (
 				2B4E9060258730B900B6716C /* TimelineVC.swift in Sources */,
 				2BF15F6F25AEE73400338714 /* SummaryResult.swift in Sources */,
-				2B1FB9C625B08C4900610757 /* Displayable.swift in Sources */,
 				2BD34AC525B357AB002FB2AE /* DataFourCell.swift in Sources */,
-				2BD34ACB25B42F79002FB2AE /* CountriesService.swift in Sources */,
 				2B4E905C258730B900B6716C /* AppDelegate.swift in Sources */,
 				2B4E905E258730B900B6716C /* SceneDelegate.swift in Sources */,
 				2BD34AC025B34AAF002FB2AE /* Summary.swift in Sources */,
 				2BD34AB925B34613002FB2AE /* Change.swift in Sources */,
-				2B87E96025B4AC630053F4BB /* Country.swift in Sources */,
 				2B09989D258A7FD3005A1C5F /* CustomNavigationController.swift in Sources */,
 				2B4E90882587A8F500B6716C /* TabBarController.swift in Sources */,
 				2B1FB9CC25B1D15D00610757 /* DataZeroCell.swift in Sources */,
+				2B177B1A25B5657A002FD055 /* ColumnNamesView.swift in Sources */,
 				2BF15F5F25AC849800338714 /* Data.swift in Sources */,
 				2BD34AB325B2ED34002FB2AE /* DataThreeCell.swift in Sources */,
-				2B4E90782587327A00B6716C /* ChartVC.swift in Sources */,
+				2B177B3725B6184A002FD055 /* ChartCell.swift in Sources */,
 				2B1FB9C925B0EB1800610757 /* DataTwoCell.swift in Sources */,
+				2B177B3A25B62055002FD055 /* ChartCVC.swift in Sources */,
 				2BB218FE25A772E600DD7815 /* SummaryService.swift in Sources */,
-				2B87E95D25B4ABBD0053F4BB /* CountriesResult.swift in Sources */,
 				2BF15F6B25AD9F5800338714 /* DataOneCell.swift in Sources */,
 				2BB2190525A78C0500DD7815 /* SummaryBoxView.swift in Sources */,
 				2B4E90902587F42400B6716C /* Extensions.swift in Sources */,

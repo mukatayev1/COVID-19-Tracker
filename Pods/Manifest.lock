@@ -3,20 +3,24 @@ PODS:
   - Charts (3.6.0):
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
+  - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - Charts
+  - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Charts
+    - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 30756ebdad185f35809f0444b31969513add6fb5
+PODFILE CHECKSUM: afd54e54fb7887c8067d91dc18de662b9b32744c
 
 COCOAPODS: 1.10.0

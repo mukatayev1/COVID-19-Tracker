@@ -40,18 +40,6 @@ class TimelineVC: UIViewController {
     
     //MARK: - Helpers
     
-    func setupTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        tableView.register(DataZeroCell.self, forCellReuseIdentifier: CellIdentifiers.dataZeroIdentifier)
-        tableView.register(DataOneCell.self, forCellReuseIdentifier: CellIdentifiers.dataOneIdentifier)
-        tableView.register(DataTwoCell.self, forCellReuseIdentifier: CellIdentifiers.dataTwoIdentifier)
-        tableView.register(DataThreeCell.self, forCellReuseIdentifier: CellIdentifiers.dataThreeIdentifier)
-        tableView.register(DataFourCell.self, forCellReuseIdentifier: CellIdentifiers.dataFourIdentifier)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellIdentifiers.defaultIdentifier)
-    }
-    
     func setupIndicatorView() {
         activityIndicator.style = .medium
         activityIndicator.color = .white
@@ -64,6 +52,22 @@ class TimelineVC: UIViewController {
         view.addSubview(activityIndicator)
         activityIndicator.centerX(inView: view)
         activityIndicator.centerY(inView: view)
+    }
+    //MARK: - TableView
+    
+    func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        registerCells()
+    }
+    
+    func registerCells() {
+        tableView.register(TitleCell.self, forCellReuseIdentifier: CellIdentifiers.titleCellIdentifier)
+        tableView.register(DataOneCell.self, forCellReuseIdentifier: CellIdentifiers.dataOneIdentifier)
+        tableView.register(DataTwoCell.self, forCellReuseIdentifier: CellIdentifiers.dataTwoIdentifier)
+        tableView.register(LastUpdatedCell.self, forCellReuseIdentifier: CellIdentifiers.lastUpdatedIdentifier)
+        tableView.register(PieChartCell.self, forCellReuseIdentifier: CellIdentifiers.pieChartIdentifier)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellIdentifiers.defaultIdentifier)
     }
 }
 
@@ -78,7 +82,8 @@ extension TimelineVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.dataZeroIdentifier, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.titleCellIdentifier, for: indexPath) as! TitleCell
+            cell.titleLabel.text = "Today's Report"
             cell.selectionStyle = .none
             return cell
         } else if indexPath.row == 1 {
@@ -90,11 +95,11 @@ extension TimelineVC: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         } else if indexPath.row == 3 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.dataThreeIdentifier, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.lastUpdatedIdentifier, for: indexPath)
             cell.selectionStyle = .none
             return cell
         } else if indexPath.row == 4 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.dataFourIdentifier, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.pieChartIdentifier, for: indexPath)
             cell.selectionStyle = .none
             return cell
         } else {
@@ -102,6 +107,8 @@ extension TimelineVC: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         }
+        
+         
         
     }
     
@@ -120,7 +127,4 @@ extension TimelineVC: UITableViewDelegate, UITableViewDataSource {
             return 40
         }
     }
-    
-    
-    
 }

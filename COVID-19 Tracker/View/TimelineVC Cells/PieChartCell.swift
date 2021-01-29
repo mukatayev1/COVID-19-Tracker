@@ -8,7 +8,7 @@
 import UIKit
 import Charts
 
-class DataFourCell: UITableViewCell {
+class PieChartCell: UITableViewCell {
 
     //MARK: - Properties
     

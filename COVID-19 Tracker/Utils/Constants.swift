@@ -16,12 +16,12 @@ struct CustomColors {
 }
 
 struct CellIdentifiers {
-    static let dataZeroIdentifier = "Data Zero Cell"
+    static let titleCellIdentifier = "Title Cell"
     static let dataOneIdentifier = "Data One Cell"
     static let dataTwoIdentifier = "Data Two Cell"
-    static let dataThreeIdentifier = "Data Three Cell"
-    static let dataFourIdentifier = "Data Four Cell"
+    static let lastUpdatedIdentifier = "Last Updated Cell"
+    static let pieChartIdentifier = "Pie Chart Cell"
     static let defaultIdentifier = "Default Cell"
     
-    static let chartCellIdentifier = "Chart Cell"
+    static let myCountryIdentifier = "My Country Cell"
 }

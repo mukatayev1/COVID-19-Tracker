@@ -107,4 +107,5 @@ extension UIViewController {
         navigationItem.scrollEdgeAppearance = appearance
         navigationItem.compactAppearance = appearance
     }
+    
 }

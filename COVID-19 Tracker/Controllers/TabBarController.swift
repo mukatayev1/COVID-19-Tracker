@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class TabBarController: UITabBarController {
     
     //MARK: - Properties
@@ -18,7 +17,7 @@ class TabBarController: UITabBarController {
     
     // Create Tab two
     let tabTwo = ChartVC()
-    let tabTwoBarItem = UITabBarItem(title: "Chart", image: UIImage(systemName: "chart.bar.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .light)), selectedImage: UIImage(systemName: "chart.bar.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy)))
+    let tabTwoBarItem = UITabBarItem(title: "Country", image: UIImage(systemName: "chart.bar.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .light)), selectedImage: UIImage(systemName: "chart.bar.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy)))
     
     //MARK: - Lifecycle
     

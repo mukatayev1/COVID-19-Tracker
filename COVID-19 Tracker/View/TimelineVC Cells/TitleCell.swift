@@ -6,17 +6,16 @@
 //
 
 import UIKit
+import SnapKit
 
-class DataZeroCell: UITableViewCell {
+class TitleCell: UITableViewCell {
     
     //MARK: - Properties
     
-    let summaryService = SummaryService()
-    
-    private let titleLabel: UILabel = {
+    public let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.text = "Today's Report"
+//        label.text = "Today's Report"
         label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         return label
     }()
@@ -32,17 +31,13 @@ class DataZeroCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    //MARK: - Helpers
-    
-    
     //MARK: - Subviews
     
     func subviewElements() {
-        
         addSubview(titleLabel)
-        titleLabel.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, paddingLeft: 15)
+        titleLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(contentView.snp.left).inset(15)
+            make.top.equalToSuperview()
+        }
     }
-
-
 }

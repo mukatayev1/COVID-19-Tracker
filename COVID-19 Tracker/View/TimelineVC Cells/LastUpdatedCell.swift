@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DataThreeCell: UITableViewCell {
+class LastUpdatedCell: UITableViewCell {
 
     //MARK: - Properties
     

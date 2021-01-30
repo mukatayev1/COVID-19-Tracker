@@ -12,11 +12,11 @@ class TabBarController: UITabBarController {
     //MARK: - Properties
     
     // Create Tab one
-    let tabOne = TimelineVC()
+    let tabOne = WorldVC()
     let tabOneBarItem = UITabBarItem(title: "World", image: UIImage(systemName: "globe", withConfiguration: UIImage.SymbolConfiguration(weight: .light)), selectedImage: UIImage(systemName: "globe", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy)))
     
     // Create Tab two
-    let tabTwo = ChartVC()
+    let tabTwo = MyCountryVC()
     let tabTwoBarItem = UITabBarItem(title: "Country", image: UIImage(systemName: "chart.bar.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .light)), selectedImage: UIImage(systemName: "chart.bar.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy)))
     
     //MARK: - Lifecycle
@@ -37,9 +37,5 @@ class TabBarController: UITabBarController {
         tabBar.barTintColor = CustomColors.darkBlue
         tabBar.tintColor = CustomColors.lightGray
     }
-
-//    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-//        print("Selected \(item.title!)")
-//    }
 
 }

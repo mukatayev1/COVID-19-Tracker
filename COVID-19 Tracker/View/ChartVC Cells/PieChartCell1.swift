@@ -1,22 +1,19 @@
 //
-//  DataFourCell.swift
+//  PieChartCell1.swift
 //  COVID-19 Tracker
 //
-//  Created by AZM on 2021/01/17.
+//  Created by AZM on 2021/01/30.
 //
 
 import UIKit
 import Charts
 import SnapKit
 
-class PieChartCell: UITableViewCell {
-
+class PieChartCell1: UITableViewCell {
     //MARK: - Properties
-    
-    let summaryService = TotalDataService()
+
     let pieChart = PieChartView()
-    
-    let activeCasesDataEntry = PieChartDataEntry()
+
     let deathsDataEntry = PieChartDataEntry()
     let recoveredDataEntry = PieChartDataEntry()
     let criticalDataEntry = PieChartDataEntry()
@@ -29,7 +26,7 @@ class PieChartCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
         subviewElements()
-        constructPieChart()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -38,34 +35,26 @@ class PieChartCell: UITableViewCell {
     
     //MARK: - Helpers
     
-    func constructPieChart() {
+    func constructPieChart(deathsValue: Double, recoveredValue: Double, criticalValue: Double) {
         let chartData = PieChartData(dataSet: setupPieChart())
         
-        summaryService.getSummary { (summary) in
-            
-            if let summary = summary {
-                self.activeCasesDataEntry.value = Double(summary.activeCases)
-                self.deathsDataEntry.value = Double(summary.deaths)
-                self.recoveredDataEntry.value = Double(summary.recovered)
-                self.criticalDataEntry.value = Double(summary.critical)
-                
-                self.pieChart.data = chartData
-            }
-        }
+        self.deathsDataEntry.value = deathsValue
+        self.recoveredDataEntry.value = recoveredValue
+        self.criticalDataEntry.value = criticalValue
+        
+        self.pieChart.data = chartData
     }
     
-    func setupPieChart() -> PieChartDataSet{
+    func setupPieChart() -> PieChartDataSet {
         setupPieChartLegend()
-        
-        activeCasesDataEntry.label = "Active"
+    
         deathsDataEntry.label = "Deaths"
         recoveredDataEntry.label = "Recovered"
         criticalDataEntry.label = "Critical"
         
-        let colors = [CustomColors.purple, UIColor.systemRed, UIColor.systemGreen, #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)]
+        let colors = [UIColor.systemRed, UIColor.systemGreen, #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)]
         
-        totalDataEntries = [activeCasesDataEntry, deathsDataEntry,
-                            recoveredDataEntry, criticalDataEntry]
+        totalDataEntries = [deathsDataEntry, recoveredDataEntry, criticalDataEntry]
         
         let chartDataSet = PieChartDataSet(entries: totalDataEntries, label: nil)
         chartDataSet.colors = colors
@@ -97,5 +86,4 @@ class PieChartCell: UITableViewCell {
             make.edges.equalToSuperview()
         }
     }
-    
 }

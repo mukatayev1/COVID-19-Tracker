@@ -8,16 +8,16 @@
 import UIKit
 import Alamofire
 
-class CountriesService {
+class CountriesListService {
     
     let headers: HTTPHeaders =  [
         "x-rapidapi-key": "3dfb6a3d80msh49e026617c05c52p182039jsnc2c6112247d0",
         "x-rapidapi-host": "covid-19-data.p.rapidapi.com"
     ]
     
-    let baseURL: URL?
-    
     let countryArray = [Country].self
+    
+    let baseURL: URL?
     
     init() {
         self.baseURL = URL(string: "https://covid-19-data.p.rapidapi.com/help/countries")
@@ -31,7 +31,6 @@ class CountriesService {
                 let countriesArray = response.value
                 completion(countriesArray)
             }
-            
     }
 }
 

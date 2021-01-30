@@ -7,25 +7,29 @@
 
 import UIKit
 
+protocol CountriesListVCDelegate {
+    func didSelectCountry(name: String)
+}
+
 class CountriesListVC: UITableViewController {
     //MARK: - Properties
     
-    let countriesService = CountriesService()
+    var delegate: CountriesListVCDelegate?
+    
+    let countriesService = CountriesListService()
     
     let searchController = UISearchController(searchResultsController: nil)
+    
+    var countries: [Country] = []
+    var filteredCountries: [Country] = []
     
     var isSearchBarEmpty: Bool {
       return searchController.searchBar.text?.isEmpty ?? true
     }
     
-    var filteredCountries: [Country] = []
-    
-    var countries: [Country] = []
-    
     var isFiltering: Bool {
       return searchController.isActive && !isSearchBarEmpty
     }
-
     //MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -35,20 +39,20 @@ class CountriesListVC: UITableViewController {
         self.navigationController!.navigationBar.tintColor = CustomColors.purple
         
         fetchCountries()
-        
         //setting up tableview
         setupTableView()
-        
         //setting up searchController
         setupSearchController()
-        
         //setting up backBarButtton
-        let closeBarButtton = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(dismissVC))
-        self.navigationItem.leftBarButtonItem = closeBarButtton
-        
+        setupNavigationItemButtons()
     }
-    
     //MARK: - Helpers
+    
+    func setupNavigationItemButtons() {
+        let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
+        self.navigationItem.rightBarButtonItem = doneBarButton
+        navigationItem.rightBarButtonItem?.tintColor = .white
+    }
     
     func setupTableView() {
         self.tableView = UITableView(frame: self.tableView.frame, style: .insetGrouped)
@@ -59,7 +63,6 @@ class CountriesListVC: UITableViewController {
     func setupSearchController() {
         // 1
         searchController.searchResultsUpdater = self
-        present(searchController, animated: true)
         searchController.automaticallyShowsSearchResultsController = true
         // 2
         searchController.obscuresBackgroundDuringPresentation = false
@@ -71,6 +74,8 @@ class CountriesListVC: UITableViewController {
         definesPresentationContext = false
         //6
         searchController.searchBar.tintColor = .white
+        //7
+        searchController.becomeFirstResponder()
     }
     
     func filterContentForSearchText(_ searchText: String) {
@@ -89,35 +94,42 @@ class CountriesListVC: UITableViewController {
             }
         }
     }
-    
-    //MARK: - selectors
+    //MARK: - Selectors
     
     @objc func dismissVC() {
         dismiss(animated: true, completion: nil)
     }
-    
-    //MARK: - UITableViewDelegate, UITableViewDataSource
+}
+//MARK: - UISearchResultsUpdating
 
+extension CountriesListVC: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        filterContentForSearchText(searchBar.text!)
+    }
+}
+//MARK: - UITableViewDelegate, UITableViewDataSource
+
+extension CountriesListVC {
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         if isFiltering {
           return filteredCountries.count
         }
 
         return countries.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.backgroundColor = CustomColors.darkBlue
-        cell.textLabel?.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        cell.textLabel?.textColor = #colorLiteral(red: 0.9040365866, green: 0.9040365866, blue: 0.9040365866, alpha: 1)
         cell.textLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-    
+
         var country = countries[indexPath.row]
         if isFiltering {
             country = filteredCountries[indexPath.row]
@@ -128,13 +140,20 @@ class CountriesListVC: UITableViewController {
         
         return cell
     }
-}
-
-//MARK: - UISearchResultsUpdating
-
-extension CountriesListVC: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        let searchBar = searchController.searchBar
-        filterContentForSearchText(searchBar.text!)
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if  isFiltering {
+            if let countryName = filteredCountries[indexPath.row].name {
+                delegate?.didSelectCountry(name: countryName)
+            }
+        } else {
+            if let countryName = countries[indexPath.row].name {
+                delegate?.didSelectCountry(name: countryName)
+            }
+        }
+        
+        searchController.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

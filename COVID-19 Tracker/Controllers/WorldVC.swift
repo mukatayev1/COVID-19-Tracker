@@ -8,11 +8,11 @@
 import UIKit
 import Alamofire
 
-class TimelineVC: UIViewController {
+class WorldVC: UIViewController {
     
     //MARK: - Properties
     
-    let summaryService = SummaryService()
+    let summaryService = TotalDataService()
     
     private let tableView: UITableView = {
         let tv = UITableView()
@@ -73,7 +73,7 @@ class TimelineVC: UIViewController {
 
 //MARK: - Extensions
 
-extension TimelineVC: UITableViewDelegate, UITableViewDataSource {
+extension WorldVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
@@ -86,30 +86,32 @@ extension TimelineVC: UITableViewDelegate, UITableViewDataSource {
             cell.titleLabel.text = "Today's Report"
             cell.selectionStyle = .none
             return cell
-        } else if indexPath.row == 1 {
+        }
+        else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.dataOneIdentifier, for: indexPath)
             cell.selectionStyle = .none
             return cell
-        } else if indexPath.row == 2 {
+        }
+        else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.dataTwoIdentifier, for: indexPath)
             cell.selectionStyle = .none
             return cell
-        } else if indexPath.row == 3 {
+        }
+        else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.lastUpdatedIdentifier, for: indexPath)
             cell.selectionStyle = .none
             return cell
-        } else if indexPath.row == 4 {
+        }
+        else if indexPath.row == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.pieChartIdentifier, for: indexPath)
             cell.selectionStyle = .none
             return cell
-        } else {
+        }
+        else {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.defaultIdentifier, for: indexPath)
             cell.selectionStyle = .none
             return cell
-        }
-        
-         
-        
+        }  
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

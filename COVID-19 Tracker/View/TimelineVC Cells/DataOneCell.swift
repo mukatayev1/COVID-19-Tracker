@@ -11,7 +11,7 @@ class DataOneCell: UITableViewCell {
     
     //MARK: - Properties
     
-    let summaryService = SummaryService()
+    let summaryService = TotalDataService()
     
     private let totalCasesBox: SummaryBoxView = {
         let v = SummaryBoxView()
@@ -109,16 +109,16 @@ class DataOneCell: UITableViewCell {
     
     func subviewElements() {
         
-        addSubview(totalCasesBox)
+        contentView.addSubview(totalCasesBox)
         totalCasesBox.anchor(top: topAnchor, left: leftAnchor, bottom: centerYAnchor, right: centerXAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 5, paddingRight: 5)
         
-        addSubview(activeCasesBox)
+        contentView.addSubview(activeCasesBox)
         activeCasesBox.anchor(top: topAnchor, left: centerXAnchor, bottom: centerYAnchor, right: rightAnchor, paddingTop: 10, paddingLeft: 5, paddingBottom: 5, paddingRight: 10)
         
-        addSubview(deathsBox)
+        contentView.addSubview(deathsBox)
         deathsBox.anchor(top: centerYAnchor, left: leftAnchor, bottom: bottomAnchor, right: centerXAnchor, paddingTop: 5, paddingLeft: 10, paddingBottom: 5, paddingRight: 5)
         
-        addSubview(recoveredBox)
+        contentView.addSubview(recoveredBox)
         recoveredBox.anchor(top: centerYAnchor, left: centerXAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 10)
     }
     

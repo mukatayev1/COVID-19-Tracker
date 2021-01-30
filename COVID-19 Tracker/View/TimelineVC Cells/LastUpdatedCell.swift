@@ -11,7 +11,7 @@ class LastUpdatedCell: UITableViewCell {
 
     //MARK: - Properties
     
-    let summaryService = SummaryService()
+    let summaryService = TotalDataService()
     
     private let lastUpdateLabel: UILabel = {
         let label = UILabel()

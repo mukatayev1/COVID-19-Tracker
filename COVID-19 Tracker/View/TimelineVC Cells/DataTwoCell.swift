@@ -11,7 +11,7 @@ class DataTwoCell: UITableViewCell {
     
     //MARK: - Properties
     
-    let summaryService = SummaryService()
+    let summaryService = TotalDataService()
     
     private let criticalBox: SummaryBoxView = {
         let v = SummaryBoxView()
@@ -118,4 +118,3 @@ class DataTwoCell: UITableViewCell {
     }
     
 }
-

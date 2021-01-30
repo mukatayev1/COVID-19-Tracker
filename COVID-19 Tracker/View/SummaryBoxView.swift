@@ -13,6 +13,7 @@ class SummaryBoxView: UIView {
         let label = UILabel()
         label.textColor = .white
         label.textAlignment = .center
+        label.text = "#####"
         label.font = UIFont.systemFont(ofSize: 28)
         return label
     }()
@@ -37,7 +38,7 @@ class SummaryBoxView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .systemTeal
+        self.backgroundColor = CustomColors.darkBlue
         self.layer.cornerRadius = 18
         subviewElements()
     }

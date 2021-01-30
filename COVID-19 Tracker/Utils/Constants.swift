@@ -23,5 +23,7 @@ struct CellIdentifiers {
     static let pieChartIdentifier = "Pie Chart Cell"
     static let defaultIdentifier = "Default Cell"
     
+    static let chooseCountryIdentifier = "Choose Country Cell"
     static let myCountryIdentifier = "My Country Cell"
+    static let pieChartIdentifier1 = "Pie Chart Cell1"
 }

@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-class SummaryService {
+class TotalDataService {
     
     let headers: HTTPHeaders = [
         "x-rapidapi-key": "3dfb6a3d80msh49e026617c05c52p182039jsnc2c6112247d0",

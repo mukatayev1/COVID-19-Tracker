@@ -1,5 +1,5 @@
 # COVID-19-Tracker-App
-App that monitors latest statistic of the COVID-19 spread around the world and the any country of the world.
+App that monitors latest statistic of the COVID-19 spread around the world and any country of the world.
 
 <img src="https://user-images.githubusercontent.com/53441647/106382246-a91e1d00-6401-11eb-95bd-732a0331c520.png" width="100" height="100">
 
@@ -33,7 +33,7 @@ Also app allows users to choose any country and see chosen country's COVID-19 st
 * Alamofire
 * TableView and Custom TableViewCell
 * Tab Bar Controller and Navigation Controller
-* SnapKit for AutoLayout
+* SnapKit
 * Charts
 * Search Controller
 * 100% Programmatic UI

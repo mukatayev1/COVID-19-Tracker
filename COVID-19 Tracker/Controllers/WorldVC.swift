@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import SnapKit
 
 class WorldVC: UIViewController {
     
@@ -48,11 +49,15 @@ class WorldVC: UIViewController {
     
     func subviewElements() {
         view.addSubview(tableView)
-        tableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor)
+        tableView.snp.makeConstraints { (make) in
+            make.top.bottom.equalTo(view.safeAreaLayoutGuide)
+            make.left.right.equalToSuperview()
+        }
         
         view.addSubview(activityIndicator)
-        activityIndicator.centerX(inView: view)
-        activityIndicator.centerY(inView: view)
+        activityIndicator.snp.makeConstraints { (make) in
+            make.center.equalTo(view.snp.center)
+        }
     }
     //MARK: - TableView
     

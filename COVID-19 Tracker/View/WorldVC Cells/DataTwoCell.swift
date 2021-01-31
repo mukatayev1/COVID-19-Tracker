@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class DataTwoCell: UITableViewCell {
     
@@ -98,19 +99,38 @@ class DataTwoCell: UITableViewCell {
     
     //MARK: - Subviews
     
-    func subviewElements() {
+    func subviewElements() { 
         
-        addSubview(criticalBox)
-        criticalBox.anchor(top: topAnchor, left: leftAnchor, bottom: centerYAnchor, right: centerXAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 5, paddingRight: 5)
+        contentView.addSubview(criticalBox)
+        criticalBox.snp.makeConstraints { (make) in
+            make.top.left.equalToSuperview().offset(10)
+            make.bottom.equalTo(contentView.snp.centerY).offset(-5)
+            make.right.equalTo(contentView.snp.centerX).offset(-5)
+        }
         
-        addSubview(testedBox)
-        testedBox.anchor(top: topAnchor, left: centerXAnchor, bottom: centerYAnchor, right: rightAnchor, paddingTop: 10, paddingLeft: 5, paddingBottom: 5, paddingRight: 10)
+        contentView.addSubview(testedBox)
+        testedBox.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(10)
+            make.left.equalTo(contentView.snp.centerX).offset(5)
+            make.bottom.equalTo(contentView.snp.centerY).offset(-5)
+            make.right.equalTo(contentView.snp.right).offset(-10)
+        }
         
-        addSubview(deathRatioBox)
-        deathRatioBox.anchor(top: centerYAnchor, left: leftAnchor, bottom: bottomAnchor, right: centerXAnchor, paddingTop: 5, paddingLeft: 10, paddingBottom: 5, paddingRight: 5)
+        contentView.addSubview(deathRatioBox)
+        deathRatioBox.snp.makeConstraints { (make) in
+            make.top.equalTo(contentView.snp.centerY).offset(5)
+            make.left.equalTo(contentView.snp.left).offset(10)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-5)
+            make.right.equalTo(contentView.snp.centerX).offset(-5)
+        }
         
-        addSubview(recoveryRatioBox)
-        recoveryRatioBox.anchor(top: centerYAnchor, left: centerXAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 10)
+        contentView.addSubview(recoveryRatioBox)
+        recoveryRatioBox.snp.makeConstraints { (make) in
+            make.top.equalTo(contentView.snp.centerY).offset(5)
+            make.left.equalTo(contentView.snp.centerX).offset(5)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-5)
+            make.right.equalTo(contentView.snp.right).offset(-10)
+        }
     }
     
 }

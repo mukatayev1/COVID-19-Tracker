@@ -106,16 +106,35 @@ class DataOneCell: UITableViewCell {
     func subviewElements() {
         
         contentView.addSubview(totalCasesBox)
-        totalCasesBox.anchor(top: topAnchor, left: leftAnchor, bottom: centerYAnchor, right: centerXAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 5, paddingRight: 5)
+        totalCasesBox.snp.makeConstraints { (make) in
+            make.top.left.equalToSuperview().offset(10)
+            make.bottom.equalTo(contentView.snp.centerY).offset(-5)
+            make.right.equalTo(contentView.snp.centerX).offset(-5)
+        }
         
         contentView.addSubview(activeCasesBox)
-        activeCasesBox.anchor(top: topAnchor, left: centerXAnchor, bottom: centerYAnchor, right: rightAnchor, paddingTop: 10, paddingLeft: 5, paddingBottom: 5, paddingRight: 10)
+        activeCasesBox.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(10)
+            make.left.equalTo(contentView.snp.centerX).offset(5)
+            make.bottom.equalTo(contentView.snp.centerY).offset(-5)
+            make.right.equalTo(contentView.snp.right).offset(-10)
+        }
         
         contentView.addSubview(deathsBox)
-        deathsBox.anchor(top: centerYAnchor, left: leftAnchor, bottom: bottomAnchor, right: centerXAnchor, paddingTop: 5, paddingLeft: 10, paddingBottom: 5, paddingRight: 5)
+        deathsBox.snp.makeConstraints { (make) in
+            make.top.equalTo(contentView.snp.centerY).offset(5)
+            make.left.equalTo(contentView.snp.left).offset(10)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-5)
+            make.right.equalTo(contentView.snp.centerX).offset(-5)
+        }
         
         contentView.addSubview(recoveredBox)
-        recoveredBox.anchor(top: centerYAnchor, left: centerXAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 10)
+        recoveredBox.snp.makeConstraints { (make) in
+            make.top.equalTo(contentView.snp.centerY).offset(5)
+            make.left.equalTo(contentView.snp.centerX).offset(5)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-5)
+            make.right.equalTo(contentView.snp.right).offset(-10)
+        }
     }
     
 }

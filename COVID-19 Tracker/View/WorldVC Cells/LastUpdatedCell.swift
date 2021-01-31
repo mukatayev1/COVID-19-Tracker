@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class LastUpdatedCell: UITableViewCell {
 
@@ -75,11 +76,18 @@ class LastUpdatedCell: UITableViewCell {
     //MARK: - Subviews
     
     func subviewElements() {
-        addSubview(lastUpdateLabel)
-        lastUpdateLabel.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, paddingLeft: 15, width: 105)
+        contentView.addSubview(lastUpdateLabel)
+        lastUpdateLabel.snp.makeConstraints { (make) in
+            make.top.bottom.equalTo(contentView)
+            make.left.equalTo(contentView.snp.left).offset(15)
+            make.width.equalTo(105)
+        }
         
-        addSubview(dateLabel)
-        dateLabel.anchor(top: topAnchor, left: lastUpdateLabel.rightAnchor, bottom: bottomAnchor, paddingLeft: 5)
+        contentView.addSubview(dateLabel)
+        dateLabel.snp.makeConstraints { (make) in
+            make.top.bottom.equalTo(contentView)
+            make.left.equalTo(lastUpdateLabel.snp.right).offset(5)
+        }
     }
     
 }

@@ -62,7 +62,7 @@ class PieChartCell1: UITableViewCell {
         chartDataSet.highlightColor = .white
         chartDataSet.entryLabelFont = UIFont.systemFont(ofSize: 10, weight: .regular)
         
-        pieChart.transparentCircleColor = CustomColors.ocean
+        pieChart.transparentCircleColor = .systemGray
         pieChart.holeColor = .clear
         
         return chartDataSet

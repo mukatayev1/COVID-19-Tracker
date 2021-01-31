@@ -15,16 +15,16 @@ class LastUpdatedCell: UITableViewCell {
     
     private let lastUpdateLabel: UILabel = {
         let label = UILabel()
-        label.textColor = CustomColors.lightGray
+        label.textColor = .systemGray
         label.text = "Latest Update:"
-        label.font = UIFont.systemFont(ofSize: 15, weight: .light)
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         return label
     }()
     
     private let dateLabel: UILabel = {
         let label = UILabel()
-        label.textColor = CustomColors.lightGray
-        label.font = UIFont.systemFont(ofSize: 15, weight: .light)
+        label.textColor = .systemGray
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         return label
     }()
     
@@ -76,7 +76,7 @@ class LastUpdatedCell: UITableViewCell {
     
     func subviewElements() {
         addSubview(lastUpdateLabel)
-        lastUpdateLabel.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, paddingLeft: 15, width: 100)
+        lastUpdateLabel.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, paddingLeft: 15, width: 105)
         
         addSubview(dateLabel)
         dateLabel.anchor(top: topAnchor, left: lastUpdateLabel.rightAnchor, bottom: bottomAnchor, paddingLeft: 5)

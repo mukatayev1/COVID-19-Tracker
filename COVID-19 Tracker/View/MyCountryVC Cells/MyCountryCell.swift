@@ -16,7 +16,6 @@ class MyCountryCell: UITableViewCell {
 
     let countryNameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 35, weight: .semibold)
         return label
     }()
@@ -25,15 +24,14 @@ class MyCountryCell: UITableViewCell {
     let confirmedNamelabel: UILabel = {
        let label = UILabel()
         label.text = "Confirmed"
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.textColor = .darkGray
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         return label
     }()
     
     let confirmedNumberlabel: UILabel = {
        let label = UILabel()
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 28, weight: .medium)
         return label
     }()
     
@@ -41,9 +39,9 @@ class MyCountryCell: UITableViewCell {
     let recoveredNamelabel: UILabel = {
        let label = UILabel()
         label.text = "Recovered"
-        label.textColor = .white
+        label.textColor = .darkGray
         label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         return label
     }()
     
@@ -51,7 +49,7 @@ class MyCountryCell: UITableViewCell {
        let label = UILabel()
         label.textColor = .systemGreen
         label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 24, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 22, weight: .regular)
         return label
     }()
     
@@ -59,9 +57,9 @@ class MyCountryCell: UITableViewCell {
     let deathsNamelabel: UILabel = {
        let label = UILabel()
         label.text = "Deaths"
-        label.textColor = .white
+        label.textColor = .darkGray
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         return label
     }()
     
@@ -69,7 +67,7 @@ class MyCountryCell: UITableViewCell {
        let label = UILabel()
         label.textColor = .systemRed
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 24, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 22, weight: .regular)
         return label
     }()
     
@@ -77,9 +75,9 @@ class MyCountryCell: UITableViewCell {
     let criticalNamelabel: UILabel = {
        let label = UILabel()
         label.text = "Critical"
-        label.textColor = .white
+        label.textColor = .darkGray
         label.textAlignment = .right
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         return label
     }()
     
@@ -87,7 +85,7 @@ class MyCountryCell: UITableViewCell {
        let label = UILabel()
         label.textColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         label.textAlignment = .right
-        label.font = UIFont.systemFont(ofSize: 24, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 22, weight: .regular)
         return label
     }()
     

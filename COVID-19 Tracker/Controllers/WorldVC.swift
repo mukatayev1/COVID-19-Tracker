@@ -27,7 +27,8 @@ class WorldVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupGradientLayer(from: CustomColors.darkBlue, to: CustomColors.ocean, locations: [0,1], in: self.view)
+        setupNavigationBar(title: "Today's Report")
+        view.backgroundColor = .systemGroupedBackground
         setupTableView()
         setupIndicatorView()
         activityIndicator.startAnimating()
@@ -42,7 +43,7 @@ class WorldVC: UIViewController {
     
     func setupIndicatorView() {
         activityIndicator.style = .medium
-        activityIndicator.color = .white
+        activityIndicator.color = .black
     }
     
     func subviewElements() {
@@ -62,7 +63,6 @@ class WorldVC: UIViewController {
     }
     
     func registerCells() {
-        tableView.register(TitleCell.self, forCellReuseIdentifier: CellIdentifiers.titleCellIdentifier)
         tableView.register(DataOneCell.self, forCellReuseIdentifier: CellIdentifiers.dataOneIdentifier)
         tableView.register(DataTwoCell.self, forCellReuseIdentifier: CellIdentifiers.dataTwoIdentifier)
         tableView.register(LastUpdatedCell.self, forCellReuseIdentifier: CellIdentifiers.lastUpdatedIdentifier)
@@ -76,33 +76,27 @@ class WorldVC: UIViewController {
 extension WorldVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.titleCellIdentifier, for: indexPath) as! TitleCell
-            cell.titleLabel.text = "Today's Report"
-            cell.selectionStyle = .none
-            return cell
-        }
-        else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.dataOneIdentifier, for: indexPath)
             cell.selectionStyle = .none
             return cell
         }
-        else if indexPath.row == 2 {
+        else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.dataTwoIdentifier, for: indexPath)
             cell.selectionStyle = .none
             return cell
         }
-        else if indexPath.row == 3 {
+        else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.lastUpdatedIdentifier, for: indexPath)
             cell.selectionStyle = .none
             return cell
         }
-        else if indexPath.row == 4 {
+        else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.pieChartIdentifier, for: indexPath)
             cell.selectionStyle = .none
             return cell
@@ -116,14 +110,12 @@ extension WorldVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 50
+            return 220
         } else if indexPath.row == 1 {
             return 220
         } else if indexPath.row == 2 {
-            return 220
-        } else if indexPath.row == 3 {
             return 40
-        } else if indexPath.row == 4 {
+        } else if indexPath.row == 3 {
             return 300
         } else {
             return 40

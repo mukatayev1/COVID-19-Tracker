@@ -27,8 +27,9 @@ class MyCountryVC: UIViewController {
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
+        setupNavigationBar(title: "My Country")
         super.viewDidLoad()
-        setupGradientLayer(from: CustomColors.darkBlue, to: CustomColors.ocean, locations: [0,1], in: self.view)
+        view.backgroundColor = .systemGroupedBackground
         subviewElements()
         setupTableView()
     }
@@ -61,7 +62,6 @@ class MyCountryVC: UIViewController {
     }
     
     func registerCells() {
-        tableView.register(TitleCell.self, forCellReuseIdentifier: CellIdentifiers.titleCellIdentifier)
         tableView.register(ChooseCountryCell.self, forCellReuseIdentifier: CellIdentifiers.chooseCountryIdentifier)
         tableView.register(MyCountryCell.self, forCellReuseIdentifier: CellIdentifiers.myCountryIdentifier)
         tableView.register(PieChartCell1.self, forCellReuseIdentifier: CellIdentifiers.pieChartIdentifier1)
@@ -71,21 +71,15 @@ class MyCountryVC: UIViewController {
 
 extension MyCountryVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.titleCellIdentifier, for: indexPath) as! TitleCell
-            cell.selectionStyle = .none
-            cell.titleLabel.text = "My Country"
-            return cell
-        }
-        else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.chooseCountryIdentifier, for: indexPath) as! ChooseCountryCell
             return cell
         }
-        else if indexPath.row == 2 {
+        else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.myCountryIdentifier, for: indexPath) as! MyCountryCell
             cell.selectionStyle = .none
             cell.countryNameLabel.text = chosenCountry?.country
@@ -95,7 +89,7 @@ extension MyCountryVC: UITableViewDelegate, UITableViewDataSource {
             cell.deathsNumberlabel.text = decimate(number: chosenCountry?.deaths ?? 0)
             return cell
         }
-        else if indexPath.row == 3 {
+        else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.pieChartIdentifier1, for: indexPath) as! PieChartCell1
             cell.selectionStyle = .none
             cell.constructPieChart(deathsValue: Double(chosenCountry?.deaths ?? 0), recoveredValue: Double(chosenCountry?.recovered ?? 0), criticalValue: Double(chosenCountry?.critical ?? 0))
@@ -112,10 +106,8 @@ extension MyCountryVC: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             return 50
         } else if indexPath.row == 1 {
-            return 30
-        } else if indexPath.row == 2 {
             return 280
-        } else if indexPath.row == 3 {
+        } else if indexPath.row == 2 {
             return 300
         } else {
             return 40
@@ -123,7 +115,7 @@ extension MyCountryVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 1 {
+        if indexPath.row == 0 {
             let vc = CountriesListVC()
             vc.delegate = self
             let navController = UINavigationController(rootViewController: vc)

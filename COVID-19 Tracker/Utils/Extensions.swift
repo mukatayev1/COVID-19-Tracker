@@ -85,27 +85,15 @@ extension UIView {
 //MARK: - UIViewController
 extension UIViewController {
     
-    func setupGradientLayer(from topColor: UIColor, to bottomColor: UIColor, locations: [NSNumber]?, in view: UIView) {
-        let gradient = CAGradientLayer()
-        gradient.colors = [topColor.cgColor, bottomColor.cgColor]
-        gradient.locations = locations
-        view.layer.addSublayer(gradient)
-        gradient.frame = view.frame
-    }
-    
-    func setupNavigationBar() {
-        let titleView = UIImageView(image: UIImage(named: "coronavirus"))
-        titleView.contentMode = .scaleAspectFit
-        titleView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        navigationItem.titleView = titleView
-        
+    func setupNavigationBar(title: String) {
+        navigationItem.title = title
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         let appearance = UINavigationBarAppearance()
+        
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = UIColor.clear
         appearance.shadowColor = .clear
         navigationItem.standardAppearance = appearance
-        navigationItem.scrollEdgeAppearance = appearance
-        navigationItem.compactAppearance = appearance
     }
     
 }

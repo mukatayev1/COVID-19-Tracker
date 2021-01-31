@@ -6,12 +6,12 @@
 //
 
 import UIKit
+import SnapKit
 
 class SummaryBoxView: UIView {
     
     let numberLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
         label.textAlignment = .center
         label.text = "#####"
         label.font = UIFont.systemFont(ofSize: 28)
@@ -21,8 +21,8 @@ class SummaryBoxView: UIView {
     let nameLabel: UILabel = {
        let label = UILabel()
         label.text = "TextLabel"
-        label.textColor = UIColor.white
         label.textAlignment = .left
+        label.textColor = .darkGray
         label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         return label
     }()
@@ -38,7 +38,7 @@ class SummaryBoxView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = CustomColors.darkBlue
+        self.backgroundColor = .systemBackground
         self.layer.cornerRadius = 18
         subviewElements()
     }
@@ -50,14 +50,20 @@ class SummaryBoxView: UIView {
     //MARK: - Subviews
     func subviewElements() {
         addSubview(nameLabel)
-        nameLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 5, paddingLeft: 10)
+        nameLabel.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(5)
+            make.left.equalToSuperview().offset(10)
+        }
         
         addSubview(numberLabel)
-        numberLabel.centerX(inView: self)
-        numberLabel.centerY(inView: self)
+        numberLabel.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
         
         addSubview(changesLabel)
-        changesLabel.anchor(top: numberLabel.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 5, paddingLeft: 10, paddingRight: 10)
-        
+        changesLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(numberLabel.snp.bottom).offset(5)
+            make.left.right.equalToSuperview().inset(10)
+        }
     }
 }

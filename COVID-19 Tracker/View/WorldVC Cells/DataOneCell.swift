@@ -15,7 +15,6 @@ class DataOneCell: UITableViewCell {
     
     private let totalCasesBox: SummaryBoxView = {
         let v = SummaryBoxView()
-        v.backgroundColor = CustomColors.darkBlue
         v.nameLabel.text = "Total Cases"
         v.changesLabel.textColor = .systemRed
         return v
@@ -23,7 +22,6 @@ class DataOneCell: UITableViewCell {
     
     private let activeCasesBox: SummaryBoxView = {
         let v = SummaryBoxView()
-        v.backgroundColor = CustomColors.darkBlue
         v.nameLabel.text = "Active Cases"
         v.changesLabel.textColor = .systemRed
         return v
@@ -31,7 +29,6 @@ class DataOneCell: UITableViewCell {
     
     private let deathsBox: SummaryBoxView = {
         let v = SummaryBoxView()
-        v.backgroundColor = CustomColors.darkBlue
         v.nameLabel.text = "Deaths"
         v.numberLabel.textColor = .systemRed
         v.changesLabel.textColor = .systemRed
@@ -40,7 +37,6 @@ class DataOneCell: UITableViewCell {
     
     private let recoveredBox: SummaryBoxView = {
         let v = SummaryBoxView()
-        v.backgroundColor = CustomColors.darkBlue
         v.nameLabel.text = "Recovered"
         v.numberLabel.textColor = .systemGreen
         v.changesLabel.textColor = .systemGreen

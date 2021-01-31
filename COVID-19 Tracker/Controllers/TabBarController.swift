@@ -12,30 +12,20 @@ class TabBarController: UITabBarController {
     //MARK: - Properties
     
     // Create Tab one
-    let tabOne = WorldVC()
+    let tabOne = UINavigationController(rootViewController: WorldVC())
     let tabOneBarItem = UITabBarItem(title: "World", image: UIImage(systemName: "globe", withConfiguration: UIImage.SymbolConfiguration(weight: .light)), selectedImage: UIImage(systemName: "globe", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy)))
     
     // Create Tab two
-    let tabTwo = MyCountryVC()
+    let tabTwo = UINavigationController(rootViewController: MyCountryVC())
     let tabTwoBarItem = UITabBarItem(title: "Country", image: UIImage(systemName: "chart.bar.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .light)), selectedImage: UIImage(systemName: "chart.bar.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .heavy)))
     
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
         tabOne.tabBarItem = tabOneBarItem
         tabTwo.tabBarItem = tabTwoBarItem
-        setupTabBar()
         
         setViewControllers([tabOne, tabTwo], animated: true)
     }
-    
-    //MARK: - Helpers
-    
-    func setupTabBar() {
-        tabBar.barTintColor = CustomColors.darkBlue
-        tabBar.tintColor = CustomColors.lightGray
-    }
-
 }

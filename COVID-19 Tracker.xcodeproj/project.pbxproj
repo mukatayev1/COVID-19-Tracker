@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1434B8FDF767F398AEC18658 /* Pods_COVID_19_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F9F4BA013D6763AD42DEFA /* Pods_COVID_19_Tracker.framework */; };
-		2B09989D258A7FD3005A1C5F /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B09989C258A7FD3005A1C5F /* CustomNavigationController.swift */; };
 		2B0C965A25C5480400197F7A /* PieChartCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0C965925C5480400197F7A /* PieChartCell1.swift */; };
 		2B14111A25BEC41400DD073D /* ChooseCountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14111925BEC41400DD073D /* ChooseCountryCell.swift */; };
 		2B14112225BF0A6500DD073D /* CountriesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14112125BF0A6500DD073D /* CountriesListVC.swift */; };
 		2B177B3A25B62055002FD055 /* MyCountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B177B3925B62055002FD055 /* MyCountryVC.swift */; };
 		2B1FB9C925B0EB1800610757 /* DataTwoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FB9C825B0EB1800610757 /* DataTwoCell.swift */; };
-		2B1FB9CC25B1D15D00610757 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FB9CB25B1D15D00610757 /* TitleCell.swift */; };
 		2B4E905C258730B900B6716C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E905B258730B900B6716C /* AppDelegate.swift */; };
 		2B4E905E258730B900B6716C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E905D258730B900B6716C /* SceneDelegate.swift */; };
 		2B4E9060258730B900B6716C /* WorldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E905F258730B900B6716C /* WorldVC.swift */; };
@@ -40,13 +38,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B09989C258A7FD3005A1C5F /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		2B0C965925C5480400197F7A /* PieChartCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartCell1.swift; sourceTree = "<group>"; };
 		2B14111925BEC41400DD073D /* ChooseCountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCountryCell.swift; sourceTree = "<group>"; };
 		2B14112125BF0A6500DD073D /* CountriesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListVC.swift; sourceTree = "<group>"; };
 		2B177B3925B62055002FD055 /* MyCountryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCountryVC.swift; sourceTree = "<group>"; };
 		2B1FB9C825B0EB1800610757 /* DataTwoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTwoCell.swift; sourceTree = "<group>"; };
-		2B1FB9CB25B1D15D00610757 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		2B4E9058258730B900B6716C /* COVID-19 Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID-19 Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4E905B258730B900B6716C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B4E905D258730B900B6716C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,10 +87,9 @@
 		2B1DE6F9258A640300209708 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2B09989C258A7FD3005A1C5F /* CustomNavigationController.swift */,
 				2BB2190425A78C0500DD7815 /* SummaryBoxView.swift */,
-				2B87E96225B4AE050053F4BB /* TimelineVC Cells */,
-				2B87E96325B4AE200053F4BB /* ChartVC Cells */,
+				2B87E96225B4AE050053F4BB /* WorldVC Cells */,
+				2B87E96325B4AE200053F4BB /* MyCountryVC Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,34 +165,33 @@
 			path = "Country Data Models";
 			sourceTree = "<group>";
 		};
-		2B87E96225B4AE050053F4BB /* TimelineVC Cells */ = {
+		2B87E96225B4AE050053F4BB /* WorldVC Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2B1FB9CB25B1D15D00610757 /* TitleCell.swift */,
 				2BF15F6A25AD9F5800338714 /* DataOneCell.swift */,
 				2B1FB9C825B0EB1800610757 /* DataTwoCell.swift */,
 				2BD34AB225B2ED34002FB2AE /* LastUpdatedCell.swift */,
 				2BD34AC425B357AB002FB2AE /* PieChartCell.swift */,
 			);
-			path = "TimelineVC Cells";
+			path = "WorldVC Cells";
 			sourceTree = "<group>";
 		};
-		2B87E96325B4AE200053F4BB /* ChartVC Cells */ = {
+		2B87E96325B4AE200053F4BB /* MyCountryVC Cells */ = {
 			isa = PBXGroup;
 			children = (
 				2B14111925BEC41400DD073D /* ChooseCountryCell.swift */,
 				2B50551425C461C200988849 /* MyCountryCell.swift */,
 				2B0C965925C5480400197F7A /* PieChartCell1.swift */,
 			);
-			path = "ChartVC Cells";
+			path = "MyCountryVC Cells";
 			sourceTree = "<group>";
 		};
 		2B9AE3BB2595C84300D155DE /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				2BD34ACE25B46995002FB2AE /* Total Data Models */,
-				2B7325A025C3FC9600FA63BC /* Countries List Models */,
 				2B7325AB25C42CAD00FA63BC /* Country Data Models */,
+				2B7325A025C3FC9600FA63BC /* Countries List Models */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -364,9 +358,7 @@
 				2B4E905E258730B900B6716C /* SceneDelegate.swift in Sources */,
 				2BD34AC025B34AAF002FB2AE /* Summary.swift in Sources */,
 				2BD34AB925B34613002FB2AE /* Change.swift in Sources */,
-				2B09989D258A7FD3005A1C5F /* CustomNavigationController.swift in Sources */,
 				2B4E90882587A8F500B6716C /* TabBarController.swift in Sources */,
-				2B1FB9CC25B1D15D00610757 /* TitleCell.swift in Sources */,
 				2B73259E25C32F3500FA63BC /* CountriesListService.swift in Sources */,
 				2B14112225BF0A6500DD073D /* CountriesListVC.swift in Sources */,
 				2BF15F5F25AC849800338714 /* Data.swift in Sources */,

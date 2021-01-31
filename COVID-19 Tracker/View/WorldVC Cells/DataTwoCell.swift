@@ -15,7 +15,6 @@ class DataTwoCell: UITableViewCell {
     
     private let criticalBox: SummaryBoxView = {
         let v = SummaryBoxView()
-        v.backgroundColor = CustomColors.darkBlue
         v.nameLabel.text = "Critical"
         v.numberLabel.textColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         v.changesLabel.textColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
@@ -24,15 +23,13 @@ class DataTwoCell: UITableViewCell {
     
     private let testedBox: SummaryBoxView = {
         let v = SummaryBoxView()
-        v.backgroundColor = CustomColors.darkBlue
         v.nameLabel.text = "Tested"
-        v.changesLabel.textColor = .white
+        v.changesLabel.textColor = .black
         return v
     }()
     
     private let deathRatioBox: SummaryBoxView = {
         let v = SummaryBoxView()
-        v.backgroundColor = CustomColors.darkBlue
         v.nameLabel.text = "Death Ratio"
         v.numberLabel.textColor = .systemRed
         return v
@@ -40,7 +37,6 @@ class DataTwoCell: UITableViewCell {
     
     private let recoveryRatioBox: SummaryBoxView = {
         let v = SummaryBoxView()
-        v.backgroundColor = CustomColors.darkBlue
         v.nameLabel.text = "Recovery Ratio"
         v.numberLabel.textColor = .systemGreen
         return v

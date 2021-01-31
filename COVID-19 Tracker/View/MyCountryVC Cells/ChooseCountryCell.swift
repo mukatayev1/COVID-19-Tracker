@@ -14,7 +14,7 @@ class ChooseCountryCell: UITableViewCell {
     let chooseCountryLabel: UILabel = {
        let label = UILabel()
         label.text = "Choose country"
-        label.textColor = .white
+        label.textColor = .darkGray
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         return label
     }()
@@ -22,7 +22,7 @@ class ChooseCountryCell: UITableViewCell {
     let arrowImageView: UIImageView = {
        let iv = UIImageView()
         iv.image = UIImage(systemName: "arrowtriangle.down.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 18, weight: .regular))
-        iv.tintColor = CustomColors.purple
+        iv.tintColor = .systemBlue
         return iv
     }()
     
@@ -53,7 +53,4 @@ class ChooseCountryCell: UITableViewCell {
             make.left.equalTo(chooseCountryLabel.snp.right).offset(8)
         }
     }
-    
-    //MARK: - Selectors
-
 }

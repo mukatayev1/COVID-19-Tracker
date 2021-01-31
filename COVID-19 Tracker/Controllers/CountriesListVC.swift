@@ -35,8 +35,6 @@ class CountriesListVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Select Country"
-        self.navigationController!.navigationBar.barStyle = .black
-        self.navigationController!.navigationBar.tintColor = CustomColors.purple
         
         fetchCountries()
         //setting up tableview
@@ -51,13 +49,11 @@ class CountriesListVC: UITableViewController {
     func setupNavigationItemButtons() {
         let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         self.navigationItem.rightBarButtonItem = doneBarButton
-        navigationItem.rightBarButtonItem?.tintColor = .white
     }
     
     func setupTableView() {
         self.tableView = UITableView(frame: self.tableView.frame, style: .insetGrouped)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        tableView.backgroundColor = #colorLiteral(red: 0.1538572647, green: 0.1957488685, blue: 0.2651002787, alpha: 1)
     }
     
     func setupSearchController() {
@@ -73,7 +69,6 @@ class CountriesListVC: UITableViewController {
         // 5
         definesPresentationContext = false
         //6
-        searchController.searchBar.tintColor = .white
         //7
         searchController.becomeFirstResponder()
     }
@@ -126,8 +121,6 @@ extension CountriesListVC {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.backgroundColor = CustomColors.darkBlue
-        cell.textLabel?.textColor = #colorLiteral(red: 0.9040365866, green: 0.9040365866, blue: 0.9040365866, alpha: 1)
         cell.textLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
 
         var country = countries[indexPath.row]

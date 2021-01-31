@@ -29,12 +29,14 @@ Also app allows users to choose any country and see chosen country's COVID-19 st
 
 ## Technologies
 * MVC
+* UIKit
 * Alamofire
 * TableView and Custom TableViewCell
 * Tab Bar Controller and Navigation Controller
-* SnapKit
+* SnapKit for AutoLayout
 * Charts
 * Search Controller
+* 100% Programmatic UI
 
 ## Setup
 To run this project, install necessary pods using Terminal:
